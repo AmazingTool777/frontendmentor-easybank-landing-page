@@ -6,8 +6,8 @@
   }
 }
 
-@each $shade, $value in c.$accent-color-hsl {
-  .bg-accent-#{$shade} {
-    background: var(--accent-color-#{$shade});
+@each $shade, $value in c.$neutral-color-hsl {
+  .bg-neutral-#{$shade} {
+    background: var(--neutral-color-#{$shade});
   }
 }

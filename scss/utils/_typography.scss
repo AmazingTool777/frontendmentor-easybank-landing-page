@@ -7,9 +7,9 @@
  * Text color *******************************************************
  */
 
-@each $shade, $value in c.$accent-color-hsl {
-  .text-accent-#{$shade} {
-    color: var(--accent-color-#{$shade});
+@each $shade, $value in c.$neutral-color-hsl {
+  .text-neutral-#{$shade} {
+    color: var(--neutral-color-#{$shade});
   }
 }
 

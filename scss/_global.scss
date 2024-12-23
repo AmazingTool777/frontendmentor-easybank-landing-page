@@ -20,8 +20,8 @@
 
 body {
   font-family: var(--body-font-family);
-  color: rgb(255 255 255 / 80%);
-  background: var(--primary-color-300);
+  color: var(--neutral-color-300);
+  background: var(--neutral-color-100);
   overflow-x: hidden;
 }
 
@@ -31,8 +31,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--heading-font-family);
-  color: rgb(255 255 255 / 1);
+  color: var(--primary-color-blue);
+  font-weight: 400;
 }
 
 a {
