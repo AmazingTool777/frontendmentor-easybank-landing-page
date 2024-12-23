@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @use "../variables/colors" as c;
 @use "../variables/responsive-web-design" as rwd;
 
@@ -104,8 +106,8 @@ $font-sizes: (
 
   @each $text-size, $rules in $font-sizes {
     .#{$bp-prefix}#{$text-size} {
-      font-size: #{map-get($rules, "font-size")};
-      line-height: #{map-get($rules, "line-height")};
+      font-size: #{map.get($rules, "font-size")};
+      line-height: #{map.get($rules, "line-height")};
     }
   }
 }

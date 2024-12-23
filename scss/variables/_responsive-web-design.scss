@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @use "sass:list";
 @use "sass:math";
 
@@ -18,7 +20,7 @@ $breakpoints-with-blank: (
   "": 0,
 );
 @each $breakpoint, $screen-size in $breakpoints {
-  $breakpoints-with-blank: map-merge(
+  $breakpoints-with-blank: map.merge(
     $breakpoints-with-blank,
     (
       $breakpoint: $screen-size,
@@ -46,7 +48,7 @@ $breakpoints-with-blank: (
   @if $bp == "" {
     @content;
   } @else {
-    @include mixins.min-screen-size-mediaquery(map-get($breakpoints, $bp)) {
+    @include mixins.min-screen-size-mediaquery(map.get($breakpoints, $bp)) {
       @content;
     }
   }
@@ -59,7 +61,7 @@ $breakpoints-with-blank: (
   @if $bp == "" {
     @content;
   } @else {
-    @include mixins.max-screen-size-mediaquery(map-get($breakpoints, $bp)) {
+    @include mixins.max-screen-size-mediaquery(map.get($breakpoints, $bp)) {
       @content;
     }
   }
@@ -70,7 +72,7 @@ $breakpoints-with-blank: (
  * and passes down the jump value between the given interval based on the number of breakpoints to the content.
  */
 @mixin each-min-breakpoint-mediaquery(
-  $breakpoints: map-keys($map: $breakpoints-with-blank)
+  $breakpoints: map.keys($breakpoints-with-blank)
 ) {
   @each $bp in $breakpoints {
     @include min-breakpoint-mediaquery($bp) {
