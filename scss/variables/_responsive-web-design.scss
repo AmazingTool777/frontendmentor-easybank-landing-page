@@ -1,0 +1,99 @@
+@use "sass:list";
+@use "sass:math";
+
+@use "../mixins" as mixins;
+
+$breakpoints: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "\\2xl": 1538px,
+);
+
+// Copy of the $breakpoints map which is append with the `"": 0` key-value pair.
+// This version is essential for mapping CSS classes with screen size breakpoints
+// that also support versions of classes that do not depend on a screen size initially
+$breakpoints-with-blank: (
+  "": 0,
+);
+@each $breakpoint, $screen-size in $breakpoints {
+  $breakpoints-with-blank: map-merge(
+    $breakpoints-with-blank,
+    (
+      $breakpoint: $screen-size,
+    )
+  );
+}
+
+/**
+ * In the context of writing screen breakpoint dependant classnames,
+ * it determines whether to write the screen size modifier or not
+ * based on if the provided breakpoint is empty for not.
+ */
+@function write-breakpoint-modifier($bp) {
+  @if $bp == "" {
+    @return "";
+  } @else {
+    @return "#{$bp}\\:";
+  }
+}
+
+/**
+ * `min-width` @media query based on the name of a screen size breakpoint
+ */
+@mixin min-breakpoint-mediaquery($bp) {
+  @if $bp == "" {
+    @content;
+  } @else {
+    @include mixins.min-screen-size-mediaquery(map-get($breakpoints, $bp)) {
+      @content;
+    }
+  }
+}
+
+/**
+ * `max-width` @media query based on the name of a screen size breakpoint
+ */
+@mixin max-breakpoint-mediaquery($bp) {
+  @if $bp == "" {
+    @content;
+  } @else {
+    @include mixins.max-screen-size-mediaquery(map-get($breakpoints, $bp)) {
+      @content;
+    }
+  }
+}
+
+/**
+ * Loops through a list of breakpointsand applies the `min-breakpoint-mediaquery` mixin for each iteration
+ * and passes down the jump value between the given interval based on the number of breakpoints to the content.
+ */
+@mixin each-min-breakpoint-mediaquery(
+  $breakpoints: map-keys($map: $breakpoints-with-blank)
+) {
+  @each $bp in $breakpoints {
+    @include min-breakpoint-mediaquery($bp) {
+      @content (write-breakpoint-modifier($bp));
+    }
+  }
+}
+
+/**
+ * Loops through a list of breakpointsand applies the `min-breakpoint-mediaquery` mixin for each iteration
+ * and passes down the jump value between the given interval based on the number of breakpoints to the content.
+ */
+@mixin each-min-breakpoint-mediaquery-with-interval(
+  $breakpoints,
+  $start,
+  $end
+) {
+  $breakpoints-count: list.length($breakpoints);
+  $jump: math.div(math.abs($start - $end), ($breakpoints-count - 1));
+
+  @for $i from 1 through $breakpoints-count {
+    @include min-breakpoint-mediaquery(list.nth($breakpoints, $i)) {
+      @content ($i - 1, $jump);
+    }
+  }
+}

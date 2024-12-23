@@ -1,0 +1,13 @@
+@use "../variables/colors" as c;
+
+@each $shade, $value in c.$primary-color-hsl {
+  .bg-primary-#{$shade} {
+    background: var(--primary-color-#{$shade});
+  }
+}
+
+@each $shade, $value in c.$accent-color-hsl {
+  .bg-accent-#{$shade} {
+    background: var(--accent-color-#{$shade});
+  }
+}

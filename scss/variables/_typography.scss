@@ -1,0 +1,30 @@
+@use "../functions" as fn;
+
+$font-family: (
+  heading: "Raleway",
+  body: "Open Sans",
+);
+
+$base-font-size: fn.px-to-rem(14);
+
+@mixin typography-font-face {
+  // @font-face {
+  //   font-family: map-get($font-family, "heading");
+  //   src: url("/fonts/Raleway/Raleway-VariableFont_wght.ttf") format("woff2");
+  // }
+
+  // @font-face {
+  //   font-family: map-get($font-family, "body");
+  //   src: url("/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf")
+  //     format("woff2");
+  // }
+}
+
+@mixin typography-root-variables {
+  // Font families
+  --heading-font-family: #{map-get($font-family, "heading")}, serif;
+  --body-font-family: #{map-get($font-family, "body")}, sans-serif;
+
+  // Body font-size
+  --body-font-size: #{$base-font-size};
+}

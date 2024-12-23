@@ -1,0 +1,57 @@
+@use "./variables/typography" as t;
+@use "./variables/colors" as c;
+@use "./functions" as fns;
+
+// @font-face rules
+@include t.typography-font-face;
+
+// Global variables
+:root {
+  // Typography
+  @include t.typography-root-variables;
+
+  // Colors
+  @include c.colors-vars;
+}
+
+/**
+ * Global styles ****************************************************
+ */
+
+body {
+  font-family: var(--body-font-family);
+  color: rgb(255 255 255 / 80%);
+  background: var(--primary-color-300);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+  color: rgb(255 255 255 / 1);
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+::after,
+::before {
+  transition-duration: 300ms;
+}
+
+ul,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+a {
+  font-size: var(--body-font-size);
+}

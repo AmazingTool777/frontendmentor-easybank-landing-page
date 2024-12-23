@@ -1,0 +1,148 @@
+@use "../variables/colors" as c;
+@use "../variables/responsive-web-design" as rwd;
+
+/**
+ * Text color *******************************************************
+ */
+
+@each $shade, $value in c.$accent-color-hsl {
+  .text-accent-#{$shade} {
+    color: var(--accent-color-#{$shade});
+  }
+}
+
+.text-error {
+  color: var(--error-color);
+}
+
+/*******************************************************************/
+
+/**
+ * Text align **************************************************
+ */
+
+@include rwd.each-min-breakpoint-mediaquery using ($bp) {
+  $bp-prefix: rwd.write-breakpoint-modifier($bp);
+
+  .#{$bp-prefix}text-left {
+    text-align: left;
+  }
+  .#{$bp-prefix}text-center {
+    text-align: center;
+  }
+  .#{$bp-prefix}text-right {
+    text-align: right;
+  }
+  .#{$bp-prefix}text-justify {
+    text-align: justify;
+  }
+}
+
+/*******************************************************************/
+
+/**
+ * Font size ********************************************************
+ */
+
+$font-sizes: (
+  "text-xs": (
+    font-size: 0.75rem,
+    line-height: 1rem,
+  ),
+  "text-sm": (
+    font-size: 0.875rem,
+    line-height: 1.25rem,
+  ),
+  "text-base": (
+    font-size: 1rem,
+    line-height: 1.5rem,
+  ),
+  "text-lg": (
+    font-size: 1.125rem,
+    line-height: 1.75rem,
+  ),
+  "text-xl": (
+    font-size: 1.25rem,
+    line-height: 1.75rem,
+  ),
+  "text-2xl": (
+    font-size: 1.5rem,
+    line-height: 2rem,
+  ),
+  "text-3xl": (
+    font-size: 1.875rem,
+    line-height: 2.25rem,
+  ),
+  "text-4xl": (
+    font-size: 2.25rem,
+    line-height: 2.5rem,
+  ),
+  "text-5xl": (
+    font-size: 3rem,
+    line-height: 1,
+  ),
+  "text-6xl": (
+    font-size: 3.75rem,
+    line-height: 1,
+  ),
+  "text-7xl": (
+    font-size: 4.5rem,
+    line-height: 1,
+  ),
+  "text-8xl": (
+    font-size: 6rem,
+    line-height: 1,
+  ),
+  "text-9xl": (
+    font-size: 8rem,
+    line-height: 1,
+  ),
+);
+
+@include rwd.each-min-breakpoint-mediaquery using ($bp) {
+  $bp-prefix: rwd.write-breakpoint-modifier($bp);
+
+  @each $text-size, $rules in $font-sizes {
+    .#{$bp-prefix}#{$text-size} {
+      font-size: #{map-get($rules, "font-size")};
+      line-height: #{map-get($rules, "line-height")};
+    }
+  }
+}
+
+/*******************************************************************/
+
+/**
+ * Font-weight ******************************************************
+ */
+
+$font-weights: (
+  "thin": 100,
+  "extralight": 200,
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "extrabold": 800,
+  "black": 900,
+);
+
+// Generate font-weight classes
+@each $name, $value in $font-weights {
+  .font-#{$name} {
+    font-weight: $value;
+  }
+}
+
+/*******************************************************************/
+
+/**
+ * List style type **************************************************
+ */
+
+.list-none {
+  list-style-type: none;
+}
+
+/*******************************************************************/

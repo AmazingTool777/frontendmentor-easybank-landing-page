@@ -1,0 +1,116 @@
+@use "../variables/responsive-web-design" as rwd;
+
+$breakpoints: (
+  "0": 0,
+  "px": 1px,
+  "0\\.5": 0.125rem,
+  "1": 0.25rem,
+  "1\\.5": 0.375rem,
+  "2": 0.5rem,
+  "2\\.5": 0.625rem,
+  "3": 0.75rem,
+  "3\\.5": 0.875rem,
+  "4": 1rem,
+  "5": 1.25rem,
+  "6": 1.5rem,
+  "7": 1.75rem,
+  "8": 2rem,
+  "9": 2.25rem,
+  "10": 2.5rem,
+  "11": 2.75rem,
+  "12": 3rem,
+  "14": 3.5rem,
+  "16": 4rem,
+  "20": 5rem,
+  "24": 6rem,
+  "28": 7rem,
+  "32": 8rem,
+  "36": 9rem,
+  "40": 10rem,
+  "44": 11rem,
+  "48": 12rem,
+  "52": 13rem,
+  "56": 14rem,
+  "60": 15rem,
+  "64": 16rem,
+  "72": 18rem,
+  "80": 20rem,
+  "96": 24rem,
+  "auto": auto,
+);
+
+/**
+ * Mixin for writing the spacing classes for both the margin and the padding properties
+ * @param $property: margin | padding
+ * @param $property-prefix: m | p
+ */
+@mixin write-property-spacings-classes($property, $property-prefix) {
+  @each $bp, $screen-size in rwd.$breakpoints-with-blank {
+    @each $index, $size in $breakpoints {
+      @include rwd.min-breakpoint-mediaquery($bp) {
+        $bp-modifier: rwd.write-breakpoint-modifier($bp);
+
+        .#{$bp-modifier}#{$property-prefix}-#{$index} {
+          #{$property}: $size;
+        }
+        .#{$bp-modifier}#{$property-prefix}t-#{$index} {
+          #{$property}-top: $size;
+        }
+        .#{$bp-modifier}#{$property-prefix}r-#{$index} {
+          #{$property}-right: $size;
+        }
+        .#{$bp-modifier}#{$property-prefix}b-#{$index} {
+          #{$property}-bottom: $size;
+        }
+        .#{$bp-modifier}#{$property-prefix}l-#{$index} {
+          #{$property}-left: $size;
+        }
+        .#{$bp-modifier}#{$property-prefix}x-#{$index} {
+          #{$property}-left: $size;
+          #{$property}-right: $size;
+        }
+        .#{$bp-modifier}#{$property-prefix}y-#{$index} {
+          #{$property}-top: $size;
+          #{$property}-bottom: $size;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Padding **********************************************************
+ */
+
+@include write-property-spacings-classes("padding", "p");
+
+/*******************************************************************/
+
+/**
+ * Margin **********************************************************
+ */
+
+@include write-property-spacings-classes("margin", "m");
+
+/*******************************************************************/
+
+/**
+ * Space between ****************************************************
+ */
+
+@each $bp, $screen-size in rwd.$breakpoints-with-blank {
+  @each $index, $size in $breakpoints {
+    @include rwd.min-breakpoint-mediaquery($bp) {
+      $bp-modifier: rwd.write-breakpoint-modifier($bp);
+
+      .#{$bp-modifier}space-x-#{$index} > * + * {
+        margin-left: $size;
+      }
+      .#{$bp-modifier}space-y-#{$index} > * + * {
+        margin-top: $size;
+      }
+    }
+  }
+}
+
+/*******************************************************************/

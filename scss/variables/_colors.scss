@@ -1,0 +1,37 @@
+$primary-color-hsl: (
+  100: "219, 30%, 18%",
+  200: "217, 28%, 15%",
+  300: "218, 28%, 13%",
+  600: "216, 53%, 9%",
+);
+
+$accent-color-hsl: (
+  100: "176, 68%, 64%",
+  300: "198, 60%, 50%",
+);
+
+$error-color: hsl(0, 100%, 63%);
+
+/**
+ * CSS properties for a color palette;
+ * Both plain hsl values and actual hsl colors
+ */
+@mixin color-hsl-vars($prefix, $color-map) {
+  @each $shade, $color in $color-map {
+    --#{$prefix}-#{$shade}-hsl: #{$color};
+  }
+
+  @each $shade, $color in $color-map {
+    --#{$prefix}-#{$shade}: hsl(#{$color});
+  }
+}
+
+/**
+ * All CSS properties
+ */
+@mixin colors-vars {
+  @include color-hsl-vars("primary-color", $primary-color-hsl);
+  @include color-hsl-vars("accent-color", $accent-color-hsl);
+
+  --error-color: #{$error-color};
+}

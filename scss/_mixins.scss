@@ -1,0 +1,17 @@
+/**
+ * @media query for `min-width`
+ */
+@mixin min-screen-size-mediaquery($screen-size) {
+  @media screen and (min-width: $screen-size) {
+    @content;
+  }
+}
+
+/**
+ * @media query for `max-width`
+ */
+@mixin max-screen-size-mediaquery($screen-size) {
+  @media screen and (max-width: $screen-size) {
+    @content;
+  }
+}
