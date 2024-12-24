@@ -1,12 +1,66 @@
 @use "../variables/responsive-web-design" as rwd;
 
-// Display
+/**
+ * Display **********************************************************
+ */
+
 .block {
   display: block;
 }
+
 .inline-block {
   display: inline-block;
 }
+
+.hidden {
+  display: none;
+}
+
+/*******************************************************************/
+
+/**
+ * Container ********************************************************
+ */
+
+.container {
+  $start-padding-x: 1.5rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @each $bp, $screen-size in rwd.$breakpoints {
+    @include rwd.min-breakpoint-mediaquery($bp) {
+      max-width: $screen-size;
+    }
+  }
+
+  & {
+    @include rwd.each-min-breakpoint-mediaquery-with-interval(
+        $breakpoints: (
+          "",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+        ),
+        $start: $start-padding-x,
+        $end: 5.25rem
+      )
+      using ($i, $jump) {
+      $padding-x: $start-padding-x + $jump * $i;
+
+      --container-padding-x: #{$padding-x};
+    }
+
+    & {
+      padding-left: var(--container-padding-x);
+      padding-right: var(--container-padding-x);
+    }
+  }
+}
+
+/*******************************************************************/
 
 /**
  * Position *********************************************************
@@ -14,10 +68,8 @@
 
 $positions: static, relative, sticky, absolute, fixed;
 
-@include rwd.each-min-breakpoint-mediaquery using ($bp) {
+@include rwd.each-min-breakpoint-mediaquery using ($bp-modifier) {
   @each $position in $positions {
-    $bp-modifier: rwd.write-breakpoint-modifier($bp);
-
     .#{$bp-modifier}#{$position} {
       position: $position;
     }
@@ -40,10 +92,8 @@ $z-indexes: (
   "auto": auto,
 );
 
-@include rwd.each-min-breakpoint-mediaquery using ($bp) {
+@include rwd.each-min-breakpoint-mediaquery using ($bp-modifier) {
   @each $suffix, $z-index in $z-indexes {
-    $bp-modifier: rwd.write-breakpoint-modifier($bp);
-
     .#{$bp-modifier}z-#{$suffix} {
       z-index: $z-index;
     }
@@ -66,10 +116,8 @@ $z-indexes: (
   "auto": auto,
 );
 
-@include rwd.each-min-breakpoint-mediaquery using ($bp) {
+@include rwd.each-min-breakpoint-mediaquery using ($bp-modifier) {
   @each $suffix, $z-index in $z-indexes {
-    $bp-modifier: rwd.write-breakpoint-modifier($bp);
-
     .#{$bp-modifier}z-#{$suffix} {
       z-index: $z-index;
     }
@@ -128,10 +176,8 @@ $spacings: (
   "full": 100%,
 );
 
-@include rwd.each-min-breakpoint-mediaquery using ($bp) {
+@include rwd.each-min-breakpoint-mediaquery using ($bp-modifier) {
   @each $suffix, $spacing in $spacings {
-    $bp-modifier: rwd.write-breakpoint-modifier($bp);
-
     .#{$bp-modifier}top-#{$suffix} {
       top: $spacing;
     }

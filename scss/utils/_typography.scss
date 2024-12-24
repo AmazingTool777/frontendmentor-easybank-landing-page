@@ -23,9 +23,7 @@
  * Text align **************************************************
  */
 
-@include rwd.each-min-breakpoint-mediaquery using ($bp) {
-  $bp-prefix: rwd.write-breakpoint-modifier($bp);
-
+@include rwd.each-min-breakpoint-mediaquery using ($bp-prefix) {
   .#{$bp-prefix}text-left {
     text-align: left;
   }
@@ -101,9 +99,7 @@ $font-sizes: (
   ),
 );
 
-@include rwd.each-min-breakpoint-mediaquery using ($bp) {
-  $bp-prefix: rwd.write-breakpoint-modifier($bp);
-
+@include rwd.each-min-breakpoint-mediaquery using ($bp-prefix) {
   @each $text-size, $rules in $font-sizes {
     .#{$bp-prefix}#{$text-size} {
       font-size: #{map.get($rules, "font-size")};

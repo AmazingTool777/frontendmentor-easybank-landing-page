@@ -1,3 +1,10 @@
 @forward "./reset";
 @forward "./global";
 @forward "./utils";
+@forward "./animations";
+
+// Components
+@forward "./components/button";
+
+// Parts
+@forward "./parts/navbar";

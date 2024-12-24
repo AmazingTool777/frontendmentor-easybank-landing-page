@@ -221,10 +221,8 @@ $grid-columns: (
   "12": repeat(12, 1fr),
 );
 
-@include rwd.each-min-breakpoint-mediaquery using ($bp) {
+@include rwd.each-min-breakpoint-mediaquery using ($bp-prefix) {
   @each $key, $value in $grid-columns {
-    $bp-prefix: rwd.write-breakpoint-modifier($bp);
-
     .#{$bp-prefix}grid-cols-#{$key} {
       grid-template-columns: $value;
     }

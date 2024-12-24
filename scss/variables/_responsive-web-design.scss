@@ -86,7 +86,7 @@ $breakpoints-with-blank: (
  * and passes down the jump value between the given interval based on the number of breakpoints to the content.
  */
 @mixin each-min-breakpoint-mediaquery-with-interval(
-  $breakpoints,
+  $breakpoints: map.keys($breakpoints-with-blank),
   $start,
   $end
 ) {

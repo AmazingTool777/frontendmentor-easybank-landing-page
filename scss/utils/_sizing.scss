@@ -59,12 +59,24 @@ $sizes: (
  * Width ************************************************************
  */
 
-@include rwd.each-min-breakpoint-mediaquery using ($bp) {
+@include rwd.each-min-breakpoint-mediaquery using ($bp-prefix) {
   @each $prefix, $width in $sizes {
-    $bp-prefix: rwd.write-breakpoint-modifier($bp);
-
     .#{$bp-prefix}w-#{$prefix} {
       width: $width;
+    }
+  }
+}
+
+/*******************************************************************/
+
+/**
+ * Height ***********************************************************
+ */
+
+@include rwd.each-min-breakpoint-mediaquery using ($bp-prefix) {
+  @each $prefix, $height in $sizes {
+    .#{$bp-prefix}h-#{$prefix} {
+      height: $height;
     }
   }
 }

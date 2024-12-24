@@ -30,5 +30,5 @@ $neutral-color-hsl: (
  */
 @mixin colors-vars {
   @include color-hsl-vars("primary-color", $primary-color-hsl);
-  @include color-hsl-vars("accent-color", $neutral-color-hsl);
+  @include color-hsl-vars("neutral-color", $neutral-color-hsl);
 }
