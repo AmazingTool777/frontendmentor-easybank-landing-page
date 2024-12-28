@@ -49,3 +49,17 @@ const navbarMenu = setupNavbarMenu({
     menu.classList.add(NAVBAR_MENU_HIDDEN_CLASSNAME);
   },
 });
+
+function applyNavbarShadowOnScroll() {
+  const navbar = document.querySelector(".navbar");
+  const SHADOW_CLASSNAME = "navbar--shadowed";
+  if (window.scrollY > 0) {
+    navbar.classList.add(SHADOW_CLASSNAME);
+  } else {
+    navbar.classList.remove(SHADOW_CLASSNAME);
+  }
+}
+
+// Setup of the bottom shadow of the navbar on scroll
+applyNavbarShadowOnScroll();
+window.addEventListener("scroll", applyNavbarShadowOnScroll);
