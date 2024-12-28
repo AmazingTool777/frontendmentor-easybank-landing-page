@@ -69,6 +69,7 @@ export function setupNavbarMenu(options) {
       }
     }
     menu.setAttribute("aria-hidden", !_toOpen);
+    activator.setAttribute("aria-expanded", _toOpen);
     isOpen = _toOpen;
   }
 
@@ -103,8 +104,10 @@ export function setupNavbarMenu(options) {
           menu.setAttribute("aria-hidden", false);
         }
         activator.setAttribute("aria-hidden", true);
+        activator.setAttribute("aria-expanded", true);
       } else {
         menu.setAttribute("aria-hidden", !isOpen);
+        activator.setAttribute("aria-expanded", isOpen);
         activator.setAttribute("aria-hidden", false);
       }
     });
