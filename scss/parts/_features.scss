@@ -1,0 +1,175 @@
+@use "sass:list";
+@use "../variables/responsive-web-design" as rwd;
+@use "../functions" as fns;
+
+.features {
+  text-align: center;
+  background-color: var(--neutral-color-100);
+
+  $padding-y-px: 64 104;
+  @include rwd.each-min-breakpoint-mediaquery-with-interval(
+      ("", "sm", "md", "lg", "xl"),
+      list.nth($padding-y-px, 1),
+      list.nth($padding-y-px, 2)
+    )
+    using ($i, $jump) {
+    & {
+      $padding-y: fns.px-to-rem(list.nth($padding-y-px, 1) + $jump * $i);
+
+      padding-top: $padding-y;
+      padding-bottom: $padding-y;
+    }
+  }
+
+  @include rwd.min-breakpoint-mediaquery("lg") {
+    text-align: left;
+  }
+
+  &__header {
+    max-width: fns.px-to-rem(354);
+    margin: 0 auto;
+
+    @include rwd.min-breakpoint-mediaquery("sm") {
+      max-width: fns.px-to-rem(410);
+    }
+
+    @include rwd.min-breakpoint-mediaquery("md") {
+      max-width: fns.px-to-rem(570);
+    }
+
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      margin-left: 0;
+      max-width: fns.px-to-rem(640);
+    }
+  }
+
+  &__heading {
+    line-height: 1.15;
+
+    $font-size-px: 32 40;
+    @include rwd.each-min-breakpoint-mediaquery-with-interval(
+        ("", "sm", "md", "lg", "xl"),
+        list.nth($font-size-px, 1),
+        list.nth($font-size-px, 2)
+      )
+      using ($i, $jump) {
+      & {
+        font-size: fns.px-to-rem(list.nth($font-size-px, 1) + $jump * $i);
+      }
+    }
+  }
+
+  &__description {
+    line-height: 1.6;
+    font-size: fns.px-to-rem(15);
+    margin-top: 1.2em;
+    margin-bottom: 0;
+
+    @include rwd.min-breakpoint-mediaquery("md") {
+      font-size: fns.px-to-rem(16);
+    }
+
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      font-size: fns.px-to-rem(18);
+      margin-top: 1.333em;
+    }
+  }
+
+  &__articles {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: fns.px-to-rem(34);
+
+    $margin-top-px: 58 72;
+    @include rwd.each-min-breakpoint-mediaquery-with-interval(
+        ("", "sm", "md", "lg", "xl"),
+        list.nth($margin-top-px, 1),
+        list.nth($margin-top-px, 2)
+      )
+      using ($i, $jump) {
+      & {
+        margin-top: fns.px-to-rem(list.nth($margin-top-px, 1) + $jump * $i);
+      }
+    }
+
+    @include rwd.min-breakpoint-mediaquery("sm") {
+      row-gap: fns.px-to-rem(38);
+    }
+
+    @include rwd.min-breakpoint-mediaquery("md") {
+      row-gap: fns.px-to-rem(42);
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include rwd.min-breakpoint-mediaquery("xl") {
+      flex-wrap: nowrap;
+      column-gap: fns.px-to-rem(19.5);
+    }
+  }
+}
+
+.feature {
+  max-width: fns.px-to-rem(346);
+  flex-basis: 100%;
+
+  @include rwd.min-breakpoint-mediaquery("md") {
+    flex-basis: 50%;
+  }
+
+  @include rwd.min-breakpoint-mediaquery("xl") {
+    flex-basis: 25%;
+  }
+
+  &__icon {
+    display: inline-block;
+  }
+
+  &__heading {
+    line-height: normal;
+
+    font-size: fns.px-to-rem(20);
+    @include rwd.min-breakpoint-mediaquery("md") {
+      font-size: fns.px-to-rem(22);
+    }
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      font-size: fns.px-to-rem(24);
+    }
+
+    $margin-top-px: 26 40;
+    @include rwd.each-min-breakpoint-mediaquery-with-interval(
+        ("", "sm", "md", "lg", "xl"),
+        list.nth($margin-top-px, 1),
+        list.nth($margin-top-px, 2)
+      )
+      using ($i, $jump) {
+      & {
+        margin-top: fns.px-to-rem(list.nth($margin-top-px, 1) + $jump * $i);
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: 0;
+    font-size: fns.px-to-rem(15);
+    line-height: 1.64;
+
+    $margin-top-px: 20 28;
+    @include rwd.each-min-breakpoint-mediaquery-with-interval(
+        ("", "sm", "md", "lg"),
+        list.nth($margin-top-px, 1),
+        list.nth($margin-top-px, 2)
+      )
+      using ($i, $jump) {
+      & {
+        margin-top: fns.px-to-rem(list.nth($margin-top-px, 1) + $jump * $i);
+      }
+    }
+
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      font-size: fns.px-to-rem(16);
+    }
+  }
+}
