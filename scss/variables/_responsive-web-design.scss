@@ -61,7 +61,9 @@ $breakpoints-with-blank: (
   @if $bp == "" {
     @content;
   } @else {
-    @include mixins.max-screen-size-mediaquery(map.get($breakpoints, $bp)) {
+    @include mixins.max-screen-size-mediaquery(
+      calc(map.get($breakpoints, $bp) - 1px)
+    ) {
       @content;
     }
   }
