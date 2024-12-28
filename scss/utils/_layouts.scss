@@ -31,7 +31,9 @@
 
   @each $bp, $screen-size in rwd.$breakpoints {
     @include rwd.min-breakpoint-mediaquery($bp) {
-      max-width: $screen-size;
+      --container-max-width: #{$screen-size};
+
+      max-width: var(--container-max-width);
     }
   }
 

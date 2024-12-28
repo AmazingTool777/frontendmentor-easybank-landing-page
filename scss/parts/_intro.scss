@@ -1,0 +1,155 @@
+@use "sass:list";
+
+@use "../variables/responsive-web-design" as rwd;
+@use "../functions" as fns;
+
+.intro {
+  position: relative;
+
+  &__layout {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      flex-direction: row;
+      align-items: center;
+      height: min(45.5vw, fns.px-to-rem(656));
+    }
+  }
+
+  &__content {
+    text-align: center;
+    max-width: fns.px-to-rem(690);
+
+    $padding-top-px: 40 64;
+    @include rwd.each-min-breakpoint-mediaquery-with-interval(
+        ("", "sm", "md"),
+        list.nth($padding-top-px, 1),
+        list.nth($padding-top-px, 2)
+      )
+      using ($i, $jump) {
+      padding-top: fns.px-to-rem(list.nth($padding-top-px, 1) + $jump * $i);
+    }
+
+    & {
+      $padding-bottom-px: 88 140;
+      @include rwd.each-min-breakpoint-mediaquery-with-interval(
+          ("", "sm", "md"),
+          list.nth($padding-bottom-px, 1),
+          list.nth($padding-bottom-px, 2)
+        )
+        using ($i, $jump) {
+        padding-bottom: fns.px-to-rem(
+          list.nth($padding-bottom-px, 1) + $jump * $i
+        );
+      }
+    }
+
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      padding-top: 0;
+      padding-bottom: 0;
+      text-align: left;
+      max-width: var(--container-max-width);
+
+      > * {
+        max-width: fns.px-to-rem(432);
+      }
+    }
+
+    @include rwd.min-breakpoint-mediaquery("xl") {
+      > * {
+        max-width: fns.px-to-rem(450);
+      }
+    }
+  }
+
+  &__heading {
+    line-height: 1.175;
+
+    $font-size-px: 40 56;
+    @include rwd.each-min-breakpoint-mediaquery-with-interval(
+        ("", "sm", "md", "lg", "xl"),
+        list.nth($font-size-px, 1),
+        list.nth($font-size-px, 2)
+      )
+      using ($i, $jump) {
+      font-size: fns.px-to-rem(list.nth($font-size-px, 1) + $jump * $i);
+    }
+  }
+
+  &__text {
+    font-size: fns.px-to-rem(15);
+    line-height: 1.67;
+    margin-top: fns.px-to-rem(18);
+    margin-bottom: fns.px-to-rem(32);
+
+    @include rwd.min-breakpoint-mediaquery("md") {
+      font-size: fns.px-to-rem(16);
+      margin-top: fns.px-to-rem(20);
+      margin-bottom: fns.px-to-rem(34);
+    }
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      font-size: fns.px-to-rem(18);
+      margin-top: fns.px-to-rem(22);
+      margin-bottom: fns.px-to-rem(36);
+    }
+    @include rwd.min-breakpoint-mediaquery("xl") {
+      margin-top: fns.px-to-rem(24);
+    }
+  }
+
+  &__illustration {
+    height: max(fns.px-to-rem(281), min(75vw, fns.px-to-rem(420)));
+    position: relative;
+
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      height: 100%;
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__illustration-bg {
+    --illustration-bg-offset-x: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom right;
+    transform: translateX(-var(--illustration-bg-offset-x));
+
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      --illustration-bg-offset-x: 2.1%;
+
+      width: auto;
+      height: 138.1%;
+      object-fit: scale-down;
+      object-position: bottom left;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__illustration-mockups {
+    --illustration-mockups-offset-y: 4.15%;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--illustration-mockups-offset-y));
+    width: min(91.75%, fns.px-to-rem(514));
+
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      --illustration-mockups-offset-y: 17.23%;
+
+      width: auto;
+      height: 143.29%;
+      left: 11.66%;
+      transform: translateX(0) translateY(var(--illustration-mockups-offset-y));
+    }
+  }
+}

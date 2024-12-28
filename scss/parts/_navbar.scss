@@ -50,7 +50,7 @@
   width: 100vw;
   height: calc(100vh - var(--navbar-height));
   position: fixed;
-  bottom: 0;
+  top: var(--navbar-height);
   left: 0;
   background-image: linear-gradient(
     to bottom,

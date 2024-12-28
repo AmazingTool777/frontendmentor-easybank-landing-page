@@ -4,6 +4,7 @@
     "npm:@deno/vite-plugin@1": "1.0.2_vite@6.0.5",
     "npm:@fullhuman/postcss-purgecss@^7.0.2": "7.0.2_postcss@8.4.49",
     "npm:autoprefixer@^10.4.20": "10.4.20_postcss@8.4.49",
+    "npm:gsap@^3.12.5": "3.12.5",
     "npm:postcss-sort-media-queries@^5.2.0": "5.2.0_postcss@8.4.49",
     "npm:postcss@^8.4.49": "8.4.49",
     "npm:sass@^1.83.0": "1.83.0",
@@ -388,6 +389,9 @@
         "path-scurry"
       ]
     },
+    "gsap@3.12.5": {
+      "integrity": "sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ=="
+    },
     "immutable@5.0.3": {
       "integrity": "sha512-P8IdPQHq3lA1xVeBRi5VPqUm5HDgKnx0Ru51wZz5mjxHr5n3RWhjIpOFU7ybkUxfB+5IToy+OLaHYDBIWsv+uw=="
     },
@@ -637,6 +641,7 @@
       "npm:@deno/vite-plugin@1",
       "npm:@fullhuman/postcss-purgecss@^7.0.2",
       "npm:autoprefixer@^10.4.20",
+      "npm:gsap@^3.12.5",
       "npm:postcss-sort-media-queries@^5.2.0",
       "npm:postcss@^8.4.49",
       "npm:sass@^1.83.0",

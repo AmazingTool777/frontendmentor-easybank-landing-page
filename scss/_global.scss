@@ -21,8 +21,9 @@
 body {
   font-family: var(--body-font-family);
   color: var(--neutral-color-300);
-  background: var(--neutral-color-100);
+  background: var(--neutral-color-50);
   overflow-x: hidden;
+  font-weight: 300;
 }
 
 h1,
@@ -32,7 +33,8 @@ h4,
 h5,
 h6 {
   color: var(--primary-color-blue);
-  font-weight: 400;
+  font-weight: 300;
+  margin: 0;
 }
 
 a {
