@@ -13,6 +13,7 @@
   border-radius: fns.px-to-rem(25);
   position: relative;
   overflow: hidden;
+  line-height: normal;
 
   &::before {
     content: "";
