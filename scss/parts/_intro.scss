@@ -65,6 +65,8 @@
 
   &__heading {
     line-height: 1.175;
+    opacity: 0;
+    transform: translateX(-100%);
 
     $font-size-px: 40 56;
     @include rwd.each-min-breakpoint-mediaquery-with-interval(
@@ -82,6 +84,8 @@
     line-height: 1.67;
     margin-top: fns.px-to-rem(18);
     margin-bottom: fns.px-to-rem(32);
+    opacity: 0;
+    transform: translateX(-100%);
 
     @include rwd.min-breakpoint-mediaquery("md") {
       font-size: fns.px-to-rem(16);
@@ -96,6 +100,11 @@
     @include rwd.min-breakpoint-mediaquery("xl") {
       margin-top: fns.px-to-rem(24);
     }
+  }
+
+  &__cta {
+    opacity: 0;
+    transform: translateX(-100%);
   }
 
   &__illustration {
@@ -119,7 +128,8 @@
     height: 100%;
     object-fit: cover;
     object-position: bottom right;
-    transform: translateX(-var(--illustration-bg-offset-x));
+    transform: translateX(calc(50% - var(--illustration-bg-offset-x)));
+    opacity: 0;
 
     @include rwd.min-breakpoint-mediaquery("lg") {
       --illustration-bg-offset-x: 2.1%;
@@ -140,7 +150,9 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%) translateY(var(--illustration-mockups-offset-y));
+    transform: translateX(-50%)
+      translateY(calc(-25% + var(--illustration-mockups-offset-y)));
+    opacity: 0;
     width: min(91.75%, fns.px-to-rem(514));
 
     @include rwd.min-breakpoint-mediaquery("lg") {
@@ -149,7 +161,8 @@
       width: auto;
       height: 143.29%;
       left: 11.66%;
-      transform: translateX(0) translateY(var(--illustration-mockups-offset-y));
+      transform: translateX(0)
+        translateY(calc(-25% + var(--illustration-mockups-offset-y)));
     }
   }
 }

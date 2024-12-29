@@ -1,3 +1,6 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 import { setupNavbarMenu } from "./components/navbar-menu";
 import { setupOverlay } from "./components/overlay";
 
@@ -54,12 +57,84 @@ function applyNavbarShadowOnScroll() {
   const navbar = document.querySelector(".navbar");
   const SHADOW_CLASSNAME = "shadowed";
   if (window.scrollY > 0) {
-    navbar.classList.add(SHADOW_CLASSNAME);
+    !navbar.classList.contains(SHADOW_CLASSNAME) &&
+      navbar.classList.add(SHADOW_CLASSNAME);
   } else {
-    navbar.classList.remove(SHADOW_CLASSNAME);
+    navbar.classList.contains(SHADOW_CLASSNAME) &&
+      navbar.classList.remove(SHADOW_CLASSNAME);
   }
 }
 
 // Setup of the bottom shadow of the navbar on scroll
 applyNavbarShadowOnScroll();
 window.addEventListener("scroll", applyNavbarShadowOnScroll);
+
+// GSAP plugins registration
+gsap.registerPlugin(ScrollTrigger);
+
+// Intro section animation
+const introTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".intro__text",
+    toggleActions: "play none none none",
+    start: "center bottom",
+  },
+});
+const INTRO_ITEMS_DURATION = 0.2;
+introTl
+  .to(".intro__heading", {
+    x: 0,
+    opacity: 1,
+    duration: INTRO_ITEMS_DURATION,
+  })
+  .to(".intro__text", {
+    x: 0,
+    opacity: 1,
+    duration: INTRO_ITEMS_DURATION,
+  })
+  .to(".intro__cta", {
+    x: 0,
+    opacity: 1,
+    duration: INTRO_ITEMS_DURATION,
+  });
+const illustrationTl = gsap.timeline({
+  delay: INTRO_ITEMS_DURATION * 3 + 0.25,
+});
+illustrationTl
+  .to(".intro__illustration-bg", {
+    x: "var(--illustration-mockups-offset-y)",
+    opacity: 1,
+    duration: 0.15,
+  })
+  .to(".intro__illustration-mockups", {
+    y: "var(--illustration-mockups-offset-y)",
+    opacity: 1,
+    duration: 0.5,
+  });
+
+// Features animation
+gsap.to(".feature", {
+  scrollTrigger: {
+    trigger: ".feature:first-child",
+    toggleActions: "play none none none",
+    start: "center bottom",
+  },
+  opacity: 1,
+  y: 0,
+  duration: 0.25,
+  stagger: 0.15,
+});
+
+// Latest articles animation
+gsap.to(".latest-article", {
+  scrollTrigger: {
+    trigger: ".latest-article:first-child",
+    toggleActions: "play none none none",
+    start: "center bottom",
+  },
+  opacity: 1,
+  x: 0,
+  skewX: 0,
+  duration: 0.25,
+  stagger: 0.25,
+});

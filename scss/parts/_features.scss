@@ -114,6 +114,8 @@
 .feature {
   max-width: fns.px-to-rem(346);
   flex-basis: 100%;
+  transform: translateY(25%);
+  opacity: 0;
 
   @include rwd.min-breakpoint-mediaquery("md") {
     flex-basis: 50%;
