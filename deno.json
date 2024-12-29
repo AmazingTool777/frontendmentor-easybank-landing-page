@@ -12,6 +12,7 @@
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
     "@fullhuman/postcss-purgecss": "npm:@fullhuman/postcss-purgecss@^7.0.2",
     "autoprefixer": "npm:autoprefixer@^10.4.20",
+    "axe-core": "npm:axe-core@^4.10.2",
     "gsap": "npm:gsap@^3.12.5",
     "postcss": "npm:postcss@^8.4.49",
     "postcss-sort-media-queries": "npm:postcss-sort-media-queries@^5.2.0",
