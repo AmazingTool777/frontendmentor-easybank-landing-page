@@ -1,0 +1,125 @@
+@use "sass:list";
+
+@use "../functions" as fns;
+@use "../variables/responsive-web-design" as rwd;
+
+.latest-articles {
+  padding-top: fns.px-to-rem(88);
+  padding-bottom: fns.px-to-rem(88);
+
+  @include rwd.min-breakpoint-mediaquery("lg") {
+    padding-bottom: fns.px-to-rem(80);
+  }
+
+  &__heading {
+    text-align: center;
+
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      text-align: left;
+    }
+
+    $font-size-px: 32 40;
+    @include rwd.each-min-breakpoint-mediaquery-with-interval(
+        ("", "sm", "md", "lg", "xl"),
+        list.nth($font-size-px, 1),
+        list.nth($font-size-px, 2)
+      )
+      using ($i, $jump) {
+      & {
+        font-size: fns.px-to-rem(list.nth($font-size-px, 1) + $jump * $i);
+      }
+    }
+  }
+
+  &__articles {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: fns.px-to-rem(30);
+
+    $row-gap-px: 24 32;
+    @include rwd.each-min-breakpoint-mediaquery-with-interval(
+        ("", "sm", "md"),
+        list.nth($row-gap-px, 1),
+        list.nth($row-gap-px, 2)
+      )
+      using ($i, $jump) {
+      & {
+        row-gap: fns.px-to-rem(list.nth($row-gap-px, 1) + $jump * $i);
+      }
+    }
+
+    $margin-top-px: 32 48;
+    @include rwd.each-min-breakpoint-mediaquery-with-interval(
+        ("", "sm", "md", "lg", "xl"),
+        list.nth($margin-top-px, 1),
+        list.nth($margin-top-px, 2)
+      )
+      using ($i, $jump) {
+      & {
+        margin-top: fns.px-to-rem(list.nth($margin-top-px, 1) + $jump * $i);
+      }
+    }
+
+    @include rwd.min-breakpoint-mediaquery("md") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include rwd.min-breakpoint-mediaquery("xl") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.latest-article {
+  background-color: var(--neutral-color-0);
+  overflow: hidden;
+  border-radius: 4px;
+  margin: auto;
+  max-width: fns.px-to-rem(400);
+  cursor: pointer;
+
+  @include rwd.min-breakpoint-mediaquery("md") {
+    margin: 0;
+    max-width: fns.px-to-rem(400);
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: fns.px-to-rem(200);
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__content {
+    padding: fns.px-to-rem(28) fns.px-to-rem(30) fns.px-to-rem(42);
+
+    @include rwd.min-breakpoint-mediaquery("md") {
+      padding: fns.px-to-rem(28) fns.px-to-rem(22) fns.px-to-rem(24);
+    }
+  }
+
+  &__author {
+    font-style: normal;
+    font-weight: 300;
+    font-size: fns.px-to-rem(10);
+    display: inline-block;
+    margin-bottom: fns.px-to-rem(12);
+  }
+
+  &__heading {
+    font-size: fns.px-to-rem(16);
+    margin-bottom: fns.px-to-rem(9);
+    transition: 0.4s ease-out;
+  }
+  &:hover &__heading {
+    color: var(--primary-color-cyan);
+  }
+
+  &__text {
+    font-size: fns.px-to-rem(13);
+    font-weight: 300;
+    line-height: 1.38;
+    margin: 0;
+  }
+}
