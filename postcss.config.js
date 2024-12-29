@@ -1,4 +1,4 @@
-// import purgeCSSPlugin from "@fullhuman/postcss-purgecss";
+// import { purgeCSSPlugin } from "@fullhuman/postcss-purgecss";
 // import postCSSSortMediaQueries from "postcss-sort-media-queries";
 // import autoprefixer from "autoprefixer";
 
