@@ -1,0 +1,58 @@
+@use "../functions" as fns;
+@use "../variables/responsive-web-design" as rwd;
+
+.footer {
+  background-color: var(--primary-color-blue);
+  padding: fns.px-to-rem(40) 0;
+
+  @include rwd.min-breakpoint-mediaquery("md") {
+    padding: fns.px-to-rem(42) 0 fns.px-to-rem(44);
+  }
+
+  @include rwd.min-breakpoint-mediaquery("lg") {
+    padding: fns.px-to-rem(44) 0 fns.px-to-rem(48);
+  }
+
+  &__sm-link {
+    --sm-link-color: var(--neutral-color-0);
+
+    display: inline-block;
+    height: fns.px-to-rem(24);
+    font-size: fns.px-to-rem(15);
+    line-height: 1;
+
+    &:hover {
+      --sm-link-color: var(--primary-color-green);
+    }
+
+    @include rwd.min-breakpoint-mediaquery("md") {
+      height: fns.px-to-rem(20);
+    }
+
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__link {
+    color: var(--neutral-color-0);
+    font-size: fns.px-to-rem(15);
+    font-weight: 400;
+
+    &:hover {
+      color: var(--primary-color-green);
+    }
+  }
+
+  &__copyright {
+    font-size: fns.px-to-rem(15);
+    color: var(--neutral-color-300);
+    margin: 0;
+    display: block;
+
+    @include rwd.min-breakpoint-mediaquery("lg") {
+      width: fns.px-to-rem(232);
+    }
+  }
+}
