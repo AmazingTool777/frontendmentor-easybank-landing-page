@@ -35,7 +35,7 @@
   z-index: 10;
   transition: box-shadow 0.3s;
 
-  #{&}--shadowed {
+  &.shadowed {
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
   }
 

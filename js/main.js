@@ -52,7 +52,7 @@ const navbarMenu = setupNavbarMenu({
 
 function applyNavbarShadowOnScroll() {
   const navbar = document.querySelector(".navbar");
-  const SHADOW_CLASSNAME = "navbar--shadowed";
+  const SHADOW_CLASSNAME = "shadowed";
   if (window.scrollY > 0) {
     navbar.classList.add(SHADOW_CLASSNAME);
   } else {
