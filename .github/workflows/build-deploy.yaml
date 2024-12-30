@@ -17,16 +17,25 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Setup Deno
-        uses: denoland/setup-deno@v2
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          deno-version: v2.x
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: v22.x
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Build Project
-        run: deno task build
+        run: pnpm build
 
       - name: Install Netlify CLI
-        run: deno install npm:netlify-cli@latest --allow-scripts=npm:netlify-cli,npm:sharp,npm:esbuild,npm:@parcel/watcher
+        run: pnpm install -D netlify-cli
 
       - name: Deploy to Netlify
         run: netlify deploy --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir=dist --prod
