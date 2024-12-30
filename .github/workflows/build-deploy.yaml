@@ -1,0 +1,32 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Setup Deno
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x # Specify the Deno version
+
+      # Step 3: Install dependencies and build the project
+      - name: Build Project
+        run: deno task build
+
+      # Step 4: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
