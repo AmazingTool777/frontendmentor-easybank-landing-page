@@ -1,0 +1,13 @@
+[build]
+command = "deno task build" # Your Deno build command
+publish = "dist"            # The output directory for static files
+
+[build.environment]
+DENO_INSTALL = "/usr/local" # Install path for Deno
+PATH = "/usr/local/bin:/opt/buildhome/.deno/bin:$PATH" # Add Deno to PATH
+
+[build.processing]
+  skip_processing = true # Skip automatic build processing
+
+[build.lifecycle]
+onInstall = "curl -fsSL https://deno.land/x/install/install.sh | sh"
