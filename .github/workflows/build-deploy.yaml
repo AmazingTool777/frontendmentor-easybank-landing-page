@@ -26,10 +26,7 @@ jobs:
         run: deno task build
 
       - name: Install Netlify CLI
-        run: deno add npm:netlify-cli@latest
-
-      - name: Link to the corresponding Netlify site
-        run: netlify link --token $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID
+        run: deno install npm:netlify-cli@latest --allow-scripts
 
       - name: Deploy to Netlify
-        run: netlify deploy --prod --dir=dist
+        run: netlify deploy --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir=dist --prod
