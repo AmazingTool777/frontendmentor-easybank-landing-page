@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easybank landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-CACJ4aOM.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BzOV9a7J.css">
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <header class="navbar">
+      <div class="relative flex justify-between items-center h-full container">
+        <!-- Logo -->
+        <a href="#" aria-label="Go to home" class="inline-block">
+          <img
+            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='139'%20height='20'%3e%3cdefs%3e%3clinearGradient%20id='a'%20x1='72.195%25'%20x2='17.503%25'%20y1='0%25'%20y2='100%25'%3e%3cstop%20offset='0%25'%20stop-color='%2333D35E'/%3e%3cstop%20offset='100%25'%20stop-color='%232AB6D9'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3cpath%20fill='%232D314D'%20fill-rule='nonzero'%20d='M37.754%2015.847c2.852%200%205.152-1.622%205.952-4.216h-3.897c-.376.665-1.14%201.066-2.055%201.066-1.237%200-2.065-.674-2.32-1.978h8.44c.051-.352.081-.694.081-1.037%200-3.335-2.537-5.95-6.201-5.95-3.568%200-6.175%202.564-6.175%206.049%200%203.473%202.628%206.066%206.175%206.066zm2.344-7.297h-4.596c.317-1.129%201.11-1.749%202.252-1.749%201.181%200%202%20.613%202.344%201.75zm10.946%207.296c1.32%200%202.5-.434%203.43-1.188l.336.804h3.027V4.093h-2.919l-.4.88c-.94-.775-2.135-1.222-3.474-1.222-3.476%200-5.961%202.505-5.961%206.026%200%203.533%202.485%206.07%205.961%206.07zm.524-3.467c-1.467%200-2.545-1.108-2.545-2.593%200-1.475%201.069-2.583%202.545-2.583%201.466%200%202.544%201.108%202.544%202.583%200%201.485-1.078%202.593-2.544%202.593zm13.123%203.467c3.02%200%205.025-1.554%205.025-3.93%200-2.883-2.387-3.256-4.183-3.575-1.08-.193-1.95-.344-1.95-.99%200-.527.422-.838%201.05-.838.71%200%201.197.337%201.197%201.063h3.667c-.044-2.303-1.92-3.843-4.816-3.843-2.912%200-4.854%201.47-4.854%203.75%200%202.757%202.337%203.289%204.1%203.574%201.092.181%201.952.368%201.952%201.024%200%20.587-.543.88-1.116.88-.742%200-1.32-.383-1.32-1.214h-3.77c.036%202.463%201.919%204.1%205.018%204.1zm8.1%203.858c2.936%200%204.344-1.257%205.877-4.736l4.764-10.863h-4.206l-2.249%206.263-2.412-6.263H70.31l4.698%2010.43c-.53%201.414-.983%201.804-2.48%201.804H71.45v3.365h1.341zm18.504-3.858c3.5%200%205.973-2.515%205.973-6.048S94.796%203.75%2091.295%203.75a5.332%205.332%200%2000-2.825.784V0H84.6v15.474h2.897l.37-.844c.923.771%202.102%201.216%203.428%201.216zm-.523-3.467c-1.467%200-2.545-1.108-2.545-2.58%200-1.486%201.078-2.594%202.545-2.594%201.466%200%202.544%201.108%202.544%202.593%200%201.473-1.087%202.58-2.544%202.58zm13.598%203.467c1.32%200%202.5-.434%203.43-1.188l.336.804h3.027V4.093h-2.918l-.401.88c-.939-.775-2.135-1.222-3.474-1.222-3.476%200-5.96%202.505-5.96%206.026%200%203.533%202.484%206.07%205.96%206.07zm.524-3.467c-1.467%200-2.545-1.108-2.545-2.593%200-1.475%201.07-2.583%202.545-2.583%201.467%200%202.545%201.108%202.545%202.583%200%201.485-1.078%202.593-2.545%202.593zm12.653%203.095V9.403c0-1.447.702-2.3%201.923-2.3.986%200%201.483.657%201.483%201.98v6.39h3.915V8.543c0-2.897-1.733-4.773-4.373-4.773-1.47%200-2.733.565-3.58%201.508l-.537-1.172h-2.747v11.369h3.916zm13.748%200v-4.808l2.848%204.808h4.616l-3.902-5.95%203.543-5.419h-4.397l-2.708%204.454V0h-3.916v15.474h3.916z'/%3e%3cg%20fill='url(%23a)'%3e%3cpath%20d='M10.802%200L0%2019.704h5.986L16.789%200z'/%3e%3cpath%20opacity='.5'%20d='M18.171%200L7.368%2019.704h5.986L24.157%200z'/%3e%3cpath%20opacity='.15'%20d='M25.539%200L14.737%2019.704h5.986L31.525%200z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"
+            alt="Easybank"
+            class="navbar__logo"
+            width="139"
+          />
+        </a>
+        <!-- Navigation links toggle on mobile devices -->
+        <button
+          aria-label="Toggle navigation menu"
+          aria-haspopup="menu"
+          aria-controls="navbar-navlinks"
+          aria-expanded="false"
+          aria-hidden="false"
+          data-navbar-menu="navbar-navlinks"
+          title="Toggle navigation menu"
+          class="navbar__nav-toggle hide-desktop"
+        >
+          <!-- Hamburger icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
+            <use href="#hamburger-icon-path"></use>
+          </svg>
+          <!-- Close icon -->
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="19"
+          >
+            <use href="#close-icon-path"></use>
+          </svg>
+        </button>
+        <!-- Navigation links -->
+        <nav id="navbar-navlinks" class="navbar-navlinks hide-mobile">
+          <ul
+            class="navbar-navlinks__list flex flex-col lg:flex-row m-0 list-none"
+          >
+            <li><a href="#" class="navbar-navlinks__link">Home</a></li>
+            <li><a href="#" class="navbar-navlinks__link">About</a></li>
+            <li><a href="#" class="navbar-navlinks__link">Contact</a></li>
+            <li><a href="#" class="navbar-navlinks__link">Blog</a></li>
+            <li><a href="#" class="navbar-navlinks__link">Careers</a></li>
+          </ul>
+        </nav>
+        <!-- CTA -->
+        <a href="#" class="btn hide-mobile">Request Invite</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Intro section -->
+      <section
+        aria-labelledby="intro-heading"
+        aria-describedby="intro-text"
+        class="intro"
+      >
+        <div class="intro__layout">
+          <!-- Intro content column -->
+          <div class="intro__content container animate-from">
+            <h1 id="intro-heading" class="intro__heading">
+              Next generation digital banking
+            </h1>
+            <p id="intro-text" class="intro__text">
+              Take your financial life online. Your Easybank account will be a
+              one-stop-shop for spending, saving, budgeting, investing, and much
+              more.
+            </p>
+            <a href="#" class="intro__cta btn inline-block">Request Invite</a>
+          </div>
+          <!-- Intro illustration column -->
+          <div class="intro__illustration">
+            <!-- Color palette background -->
+            <picture>
+              <source
+                media="(max-width: 1023px)"
+                srcset="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='375'%20height='345'%3e%3cdefs%3e%3clinearGradient%20id='prefix__c'%20x1='0%25'%20x2='99.58%25'%20y1='36.139%25'%20y2='63.745%25'%3e%3cstop%20offset='0%25'%20stop-color='%2333D35E'%20/%3e%3cstop%20offset='100%25'%20stop-color='%232AB6D9'%20/%3e%3c/linearGradient%3e%3cfilter%20id='prefix__a'%20width='116.9%25'%20height='158.7%25'%20x='-10.8%25'%20y='-28.8%25'%20filterUnits='objectBoundingBox'%3e%3cfeOffset%20dy='2'%20in='SourceAlpha'%20result='shadowOffsetOuter1'%20/%3e%3cfeGaussianBlur%20in='shadowOffsetOuter1'%20result='shadowBlurOuter1'%20stdDeviation='38.5'%20/%3e%3cfeColorMatrix%20in='shadowBlurOuter1'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.0240111451%200'%20/%3e%3c/filter%3e%3cpath%20id='prefix__b'%20d='M42.46%20162.61l70.744%2070.76a100%20100%200%200070.719%2029.298h11.03a100%20100%200%200170.719%2029.298l75.718%2075.736A100%20100%200%2000412.109%20397H633.78c27.507%200%2049.805-22.299%2049.805-49.805a49.805%2049.805%200%2000-14.583-35.213l-52.835-52.848c-7.359-7.36-7.357-19.294.003-26.653a18.846%2018.846%200%200113.325-5.518c10.408%200%2018.846-8.438%2018.846-18.846a18.85%2018.85%200%2000-5.518-13.325L534.747%2086.691a100%20100%200%2000-70.72-29.298H352.013a97.948%2097.948%200%2001-69.267-28.696A97.948%2097.948%200%2000213.477%200H84.94C65.505%200%2049.75%2015.755%2049.75%2035.19a35.19%2035.19%200%200010.304%2024.88L77.65%2077.669c9.715%209.717%209.713%2025.47-.004%2035.185a24.88%2024.88%200%2001-17.59%207.285c-13.742%200-24.88%2011.14-24.88%2024.88a24.88%2024.88%200%20007.284%2017.59z'%20/%3e%3c/defs%3e%3cg%20fill='none'%20fill-rule='evenodd'%20transform='translate(-94%20-52)'%3e%3cuse%20fill='%23000'%20filter='url(%23prefix__a)'%20xlink:href='%23prefix__b'%20/%3e%3cuse%20fill='%232D314D'%20xlink:href='%23prefix__b'%20/%3e%3cpath%20fill='url(%23prefix__c)'%20d='M256.46%20163.61l70.744%2070.76a100%20100%200%200070.719%2029.298h11.03a100%20100%200%200170.719%2029.298l75.718%2075.736A100%20100%200%2000626.109%20398H847.78c27.507%200%2049.805-22.299%2049.805-49.805a49.805%2049.805%200%2000-14.583-35.213l-52.835-52.848c-7.359-7.36-7.357-19.294.003-26.653a18.846%2018.846%200%200113.325-5.518c10.408%200%2018.846-8.438%2018.846-18.846a18.85%2018.85%200%2000-5.518-13.325L748.747%2087.691a100%20100%200%2000-70.72-29.298H566.013a97.948%2097.948%200%2001-69.267-28.696A97.948%2097.948%200%2000427.477%201H298.94c-19.435%200-35.19%2015.755-35.19%2035.19a35.19%2035.19%200%200010.304%2024.88l17.595%2017.599c9.715%209.717%209.713%2025.47-.004%2035.185a24.88%2024.88%200%2001-17.59%207.285c-13.742%200-24.88%2011.14-24.88%2024.88a24.88%2024.88%200%20007.284%2017.59z'%20/%3e%3c/g%3e%3c/svg%3e"
+              />
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='1203'%20height='956'%20viewBox='70%200%201203%20956'%3e%3cdefs%3e%3clinearGradient%20id='c'%20x1='0%25'%20x2='99.58%25'%20y1='36.147%25'%20y2='63.736%25'%3e%3cstop%20offset='0%25'%20stop-color='%2333D35E'%20/%3e%3cstop%20offset='100%25'%20stop-color='%232AB6D9'%20/%3e%3c/linearGradient%3e%3cfilter%20id='a'%20width='104.9%25'%20height='135.9%25'%20x='-4.8%25'%20y='-17.6%25'%20filterUnits='objectBoundingBox'%3e%3cfeOffset%20dy='2'%20in='SourceAlpha'%20result='shadowOffsetOuter1'%20/%3e%3cfeGaussianBlur%20in='shadowOffsetOuter1'%20result='shadowBlurOuter1'%20stdDeviation='38.5'%20/%3e%3cfeColorMatrix%20in='shadowBlurOuter1'%20values='0%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.0240111451%200'%20/%3e%3c/filter%3e%3cpath%20id='b'%20d='M69.445%20572.84L203.73%20707.112a100%20100%200%200070.708%2029.286h70.693a100%20100%200%200170.708%2029.287l161.04%20161.027A100%20100%200%2000647.584%20956h388.853c44.964%200%2081.415-36.45%2081.415-81.414a81.414%2081.414%200%2000-23.848-57.57l-86.392-86.386c-12.033-12.032-12.034-31.54-.002-43.574a30.812%2030.812%200%200121.788-9.025c17.017%200%2030.812-13.795%2030.812-30.812%200-8.172-3.246-16.01-9.025-21.788L855.85%20430.11a100%20100%200%2000-70.708-29.287H550.7a100%20100%200%2001-70.708-29.287l-35.253-35.25A100%20100%200%2000374.032%20307H138.88c-31.769%200-57.523%2025.754-57.523%2057.523a57.523%2057.523%200%200016.85%2040.676l28.761%2028.76c15.886%2015.884%2015.887%2041.64.003%2057.525a40.676%2040.676%200%2001-28.764%2011.915c-22.465%200-40.677%2018.211-40.677%2040.676a40.676%2040.676%200%200011.915%2028.764z'%20/%3e%3c/defs%3e%3cg%20fill='none'%20fill-rule='evenodd'%20transform='translate(15)'%3e%3cuse%20fill='%23000'%20filter='url(%23a)'%20xlink:href='%23b'%20/%3e%3cuse%20fill='%232D314D'%20xlink:href='%23b'%20/%3e%3cpath%20fill='url(%23c)'%20d='M207.445%20265.84L341.73%20400.112a100%20100%200%200070.708%2029.286h70.693a100%20100%200%200170.708%2029.287l161.04%20161.027A100%20100%200%2000785.584%20649h388.853c44.964%200%2081.415-36.45%2081.415-81.414a81.414%2081.414%200%2000-23.848-57.57l-86.392-86.386c-12.033-12.032-12.034-31.54-.002-43.574a30.812%2030.812%200%200121.788-9.025c17.017%200%2030.812-13.795%2030.812-30.812%200-8.172-3.246-16.01-9.025-21.788L993.85%20123.11a100%20100%200%2000-70.708-29.287H688.7a100%20100%200%2001-70.708-29.287l-35.253-35.25A100%20100%200%2000512.032%200H276.88c-31.769%200-57.523%2025.754-57.523%2057.523a57.523%2057.523%200%200016.85%2040.676l28.761%2028.76c15.886%2015.884%2015.887%2041.64.003%2057.525a40.676%2040.676%200%2001-28.764%2011.915c-22.465%200-40.677%2018.211-40.677%2040.676a40.676%2040.676%200%200011.915%2028.764z'%20/%3e%3c/g%3e%3c/svg%3e"
+                alt="Color palette background"
+                role="img"
+                class="intro__illustration-bg"
+              />
+            </picture>
+            <!-- Mobile mockups -->
+            <img
+              src="/assets/image-mockups-Ci_U7FTV.png"
+              alt="Mockups"
+              role="img"
+              class="intro__illustration-mockups"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Features section -->
+      <section
+        aria-labelledby="features-heading"
+        aria-describedby="features-description"
+        class="features"
+      >
+        <div class="container">
+          <!-- Header -->
+          <header class="features__header">
+            <h2 id="features-heading" class="features__heading">
+              Why choose Easybank?
+            </h2>
+            <p id="features-description" class="features__description">
+              We leverage Open Banking to turn your bank account into your
+              financial hub. Control your finances like never before.
+            </p>
+          </header>
+          <!-- Features articles -->
+          <div class="features__articles">
+            <article
+              aria-labelledby="feature-online-banking-heading"
+              aria-describedby="feature-online-banking-description"
+              class="feature"
+            >
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='72'%20height='72'%3e%3cdefs%3e%3clinearGradient%20id='a'%20x1='0%25'%20x2='99.58%25'%20y1='0%25'%20y2='99.58%25'%3e%3cstop%20offset='0%25'%20stop-color='%2333D35E'/%3e%3cstop%20offset='100%25'%20stop-color='%232AB6D9'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3ccircle%20cx='36'%20cy='36'%20r='36'%20fill='url(%23a)'/%3e%3cpath%20fill='%23FFF'%20fill-rule='nonzero'%20d='M45.984%2016a3.336%203.336%200%20013.332%203.332v3.727l4.11%204.118a8.72%208.72%200%20012.553%206.141v21.994a.666.666%200%2001-.667.667H43.32a.666.666%200%2001-.667-.667V48.84l-.382-.612a9.632%209.632%200%2001-.83-8.553L25.799%2045.7a3.332%203.332%200%2001-4.307-1.91l-2.504-6.502A3.325%203.325%200%200116%2033.99V19.332A3.336%203.336%200%200119.332%2016zm8.662%2033.316h-10.66v5.33h10.66v-5.33zm-7.996%201.332v1.333h-1.332v-1.333h1.332zm3.675-24.69l2.255%205.855a3.332%203.332%200%2001-1.91%204.305l-.683.266%202.465%202.466-.942.942-10.618-10.615a2.222%202.222%200%2000-3.209%203.073l5.46%205.957c.196.213.232.53.088.78a8.309%208.309%200%2000.169%208.534l.289.462h10.957V33.318a7.379%207.379%200%2000-2.162-5.198l-2.159-2.163zm-9.798%2011.36H29.565v.004l-7.953%203.065%201.124%202.923a1.999%201.999%200%20002.584%201.147l16.073-6.195-.866-.944zm-14.658.004h-5.44l.702%201.824%204.738-1.824zm20.115-19.99H19.332a2%202%200%2000-2%202V33.99a2%202%200%20002%202h19.974l-2.602-2.843a3.555%203.555%200%20015.13-4.916l6.104%206.105c.025-.114.04-.23.045-.346V23.582l-.006-.015h.006v-4.235a2%202%200%2000-1.999-2zm3.332%209.712v6.946a3.332%203.332%200%2001-.282%201.333l1.156-.446a1.999%201.999%200%20001.148-2.584l-2.022-5.25zm-27.32%204.281v1.333h-2.664v-1.333h2.665zm11.994%200v1.333h-2.665v-1.333h2.665zm-11.993-3.998v1.333h-2.665v-1.333h2.665zm3.998%200v1.333h-2.666v-1.333h2.666zm3.998%200v1.333h-2.666v-1.333h2.666zm3.997%200v1.333h-2.665v-1.333h2.665zm-10.394-8.662c.957%200%201.732.776%201.732%201.733v3.198c0%20.957-.775%201.732-1.732%201.732h-3.198a1.732%201.732%200%2001-1.733-1.732v-3.198c0-.957.776-1.733%201.733-1.733zm0%201.333h-3.198a.4.4%200%2000-.4.4v.932h1.332v1.333h-1.332v.933c0%20.22.179.4.4.4h3.198a.4.4%200%2000.4-.4v-.933h-1.333V21.33h1.333v-.932a.4.4%200%2000-.4-.4zm21.722-.666v1.998h-1.333v-1.998h1.333zm-2.666%200v1.998H41.32v-1.998h1.332zm-2.665%200v1.998h-1.332v-1.998h1.332zm-2.665%200v1.998h-1.333v-1.998h1.333z'/%3e%3c/g%3e%3c/svg%3e"
+                alt="Online Banking"
+                role="img"
+                width="72"
+                height="72"
+                class="feature__icon"
+              />
+              <h3 id="feature-online-banking-heading" class="feature__heading">
+                Online Banking
+              </h3>
+              <p
+                id="feature-online-banking-description"
+                class="feature__description"
+              >
+                Our modern web and mobile applications allow you to keep track
+                of your finances wherever you are in the world.
+              </p>
+            </article>
+            <article
+              aria-labelledby="feature-simple-budgeting-heading"
+              aria-describedby="feature-simple-budgeting-description"
+              class="feature"
+            >
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='72'%20height='72'%3e%3cdefs%3e%3clinearGradient%20id='a'%20x1='0%25'%20x2='99.58%25'%20y1='0%25'%20y2='99.58%25'%3e%3cstop%20offset='0%25'%20stop-color='%2333D35E'/%3e%3cstop%20offset='100%25'%20stop-color='%232AB6D9'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3ccircle%20cx='36'%20cy='36'%20r='36'%20fill='url(%23a)'/%3e%3cpath%20fill='%23FFF'%20fill-rule='nonzero'%20d='M44.633%2016a3.096%203.096%200%20013.092%203.092v7.57c5.23.286%209.393%204.365%209.393%209.338%200%204.973-4.162%209.052-9.393%209.338v7.57A3.095%203.095%200%200144.633%2056H27.099a3.095%203.095%200%2001-3.092-3.092v-7.24a.587.587%200%20111.174%200v3.522h21.37v-3.852a10.479%2010.479%200%2001-2.89-.568l-4.383%202.391c-.466.254-1.013-.22-.833-.716l1.308-3.596h-6.705a.592.592%200%2001-.415-.172l-4.697-4.696a.593.593%200%2001-.172-.415V24.728c0-.324.263-.587.587-.587h15.03c.324%200%20.587.263.587.587v2.402c.819-.258%201.685-.419%202.583-.468v-4.478H25.18v20.704a.587.587%200%2011-1.174%200V19.092A3.096%203.096%200%200127.099%2016zm1.918%2034.364H25.18v2.544a1.92%201.92%200%20001.918%201.918h17.534a1.92%201.92%200%20001.918-1.918v-2.544zm-9.433.705c.325%200%20.587.262.587.587v1.878a.587.587%200%2001-.587.587h-2.505a.587.587%200%2001-.587-.587v-1.878c0-.325.263-.587.587-.587zm-.587%201.174h-1.33v.704h1.33v-.704zM47.138%2027.82c-4.856%200-8.806%203.67-8.806%208.18%200%202.217.94%204.293%202.647%205.846.177.16.239.41.157.635l-1.056%202.905%203.251-1.773a.587.587%200%2001.49-.034%209.343%209.343%200%20003.317.601c4.856%200%208.806-3.67%208.806-8.18s-3.95-8.18-8.806-8.18zm0%201.33c.324%200%20.587.264.587.588v1.291h.04a2.469%202.469%200%20012.465%202.466v.626a.587.587%200%2011-1.174%200v-.626c0-.712-.58-1.291-1.292-1.291h-.94c-.884%200-1.604.72-1.604%201.604%200%20.885.72%201.605%201.605%201.605h.626a2.782%202.782%200%20012.779%202.779c0%201.44-1.1%202.627-2.505%202.765v1.305a.587.587%200%2011-1.174%200v-1.291h-.04a2.469%202.469%200%2001-2.465-2.466.587.587%200%20111.174%200c0%20.712.58%201.291%201.292%201.291h.939c.885%200%201.605-.72%201.605-1.604%200-.885-.72-1.605-1.605-1.605h-.626a2.782%202.782%200%2001-2.78-2.779c0-1.44%201.102-2.627%202.506-2.765v-1.305c0-.324.263-.587.587-.587zm-4.345-3.835H28.938v11.663h4.11c.324%200%20.587.263.587.588v4.11h5.567c-1.327-1.622-2.044-3.593-2.044-5.676%200-1.112.208-2.18.59-3.17h-6.266a.587.587%200%20110-1.174h6.82c.399-.711.893-1.369%201.466-1.957h-2.023a.587.587%200%20110-1.174h3.13c.076%200%20.148.014.214.04.53-.38%201.1-.71%201.704-.985v-2.265zM32.461%2038.153h-2.692l2.692%202.692v-2.692zm3.405-3.366a.587.587%200%20110%201.174h-4.384a.587.587%200%20110-1.174zm-.626-6.263a.587.587%200%20110%201.175h-3.758a.587.587%200%20110-1.175zm9.393-11.35H27.099a1.92%201.92%200%2000-1.918%201.918v1.918h21.37v-1.918a1.92%201.92%200%2000-1.918-1.918zm-7.515%201.33a.587.587%200%20110%201.175h-2.505a.587.587%200%20110-1.174z'/%3e%3c/g%3e%3c/svg%3e"
+                alt="Simple Budgeting"
+                role="img"
+                width="72"
+                height="72"
+                class="feature__icon"
+              />
+              <h3
+                id="feature-simple-budgeting-heading"
+                class="feature__heading"
+              >
+                Simple Budgeting
+              </h3>
+              <p
+                id="feature-simple-budgeting-description"
+                class="feature__description"
+              >
+                See exactly where your money goes each month. Receive
+                notifications when you’re close to hitting your limits.
+              </p>
+            </article>
+            <article
+              aria-labelledby="feature-fast-onboarding-heading"
+              aria-describedby="feature-fast-onboarding-description"
+              class="feature"
+            >
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='72'%20height='72'%3e%3cdefs%3e%3clinearGradient%20id='a'%20x1='0%25'%20x2='99.58%25'%20y1='0%25'%20y2='99.58%25'%3e%3cstop%20offset='0%25'%20stop-color='%2333D35E'/%3e%3cstop%20offset='100%25'%20stop-color='%232AB6D9'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3ccircle%20cx='36'%20cy='36'%20r='36'%20fill='url(%23a)'/%3e%3cpath%20fill='%23FFF'%20fill-rule='nonzero'%20d='M36%2016a4.522%204.522%200%20014.516%204.516%204.514%204.514%200%2001-1.951%203.713c2.647%201.031%204.532%203.601%204.532%206.61v3.226h-6.452v.645c0%20.356.29.645.645.645h1.29c1.068%200%201.936.868%201.936%201.935v1.29a1.938%201.938%200%2001-1.935%201.936h-1.153l.69.69-.964%201.59c.047.1.081.2.124.3h6.287a5.146%205.146%200%2001-1.759-3.87%205.167%205.167%200%20015.162-5.161%205.167%205.167%200%20015.161%205.16%205.154%205.154%200%2001-1.904%204c3.283.621%205.775%203.507%205.775%206.969V56H41.161v-7.42a.969.969%200%2000-.967-.967h-.968v1.15l-1.802.443c-.08.215-.17.43-.269.642l.963%201.59-3.453%203.454-1.59-.963c-.214.1-.428.19-.642.268L31.99%2056h-4.883l-.442-1.802a8.519%208.519%200%2001-.642-.268l-1.59.962-3.454-3.453.963-1.59a8.632%208.632%200%2001-.268-.642l-1.803-.443V43.88l1.803-.443c.079-.214.169-.428.268-.642l-.963-1.59.69-.69h-1.153a1.938%201.938%200%2001-1.935-1.935v-1.29c0-1.068.868-1.936%201.935-1.936h1.29a.645.645%200%2000.646-.645v-.645H16v-3.226c0-3.009%201.885-5.579%204.532-6.61a4.514%204.514%200%2001-1.951-3.713A4.522%204.522%200%200123.097%2016a4.522%204.522%200%20014.516%204.516%204.514%204.514%200%2001-1.952%203.713%207.126%207.126%200%20013.887%203.67%207.128%207.128%200%20013.887-3.67%204.514%204.514%200%2001-1.951-3.713A4.522%204.522%200%200136%2016zm12.903%2028.387H31.806a.969.969%200%20000%201.936h8.388a2.26%202.26%200%20012.258%202.258v6.129h9.032v-7.097h1.29v7.097h1.936v-4.516a5.813%205.813%200%2000-5.807-5.807zm-17.925-6.452h-2.86l-.37%201.514-.347.11a7.029%207.029%200%2000-1.113.465l-.32.167-1.339-.81-2.021%202.022.81%201.338-.168.32a7.08%207.08%200%2000-.465%201.114l-.11.346-1.514.372v2.86l1.514.37.109.347c.117.368.273.743.466%201.113l.167.32-.81%201.339%202.021%202.021%201.338-.81.322.168c.37.192.744.349%201.114.466l.344.11.373%201.513h2.86l.37-1.514.346-.109a7.029%207.029%200%20001.113-.466l.322-.167%201.338.81%202.021-2.021-.81-1.338.167-.322c.193-.37.35-.744.467-1.114l.11-.344%201.512-.373v-.14H35.21a5.813%205.813%200%2001-5.662%204.517%205.813%205.813%200%2001-5.806-5.806%205.813%205.813%200%20015.806-5.807c1.936%200%203.74.985%204.813%202.581h1.503l-.017-.034-.167-.322.81-1.338-2.022-2.021-1.338.81-.321-.167a7.08%207.08%200%2000-1.113-.466l-.346-.11-.372-1.514zm-1.43%203.871a4.522%204.522%200%2000-4.516%204.517%204.522%204.522%200%20004.516%204.516%204.521%204.521%200%20004.327-3.226h-1.371a3.225%203.225%200%2011-1.71-4.265%202.234%202.234%200%20011.012-.251h.898a4.533%204.533%200%2000-3.156-1.29zm0%202.581a1.938%201.938%200%2000-1.935%201.936c0%201.067.868%201.935%201.935%201.935.623%200%201.184-.3%201.542-.773a2.253%202.253%200%2001-1.542-2.13c0-.337.08-.653.212-.94-.071-.009-.14-.028-.212-.028zm17.42-9.032a3.875%203.875%200%2000-3.871%203.87%203.875%203.875%200%20003.87%203.872%203.875%203.875%200%20003.872-3.871%203.875%203.875%200%2000-3.871-3.871zm-11.613-1.29H23.742v.645a1.938%201.938%200%2001-1.936%201.935h-1.29a.645.645%200%2000-.645.645v1.29c0%20.357.289.646.645.646h2.443l1.473-1.472%201.59.962c.213-.1.428-.189.642-.268l.443-1.803h4.883l.443%201.803c.214.08.428.169.642.268l1.59-.962%201.472%201.472h2.444a.645.645%200%2000.645-.645v-1.29a.645.645%200%2000-.645-.646h-1.29a1.938%201.938%200%2001-1.936-1.935v-.645zm-12.258-9.033a5.813%205.813%200%2000-5.807%205.807v1.935h1.936v-5.161h1.29v5.161h5.161v-5.161h1.29v5.161h1.936V30.84a5.813%205.813%200%2000-5.806-5.807zm12.903%200a5.813%205.813%200%2000-5.806%205.807v1.935h1.935v-5.161h1.29v5.161h5.162v-5.161h1.29v5.161h1.935V30.84A5.813%205.813%200%200036%2025.032zm15.484-1.29A4.522%204.522%200%200156%2028.258a4.522%204.522%200%2001-4.516%204.516h-7.097v-4.516a4.522%204.522%200%20014.516-4.516zm0%201.29h-2.58a3.23%203.23%200%2000-3.227%203.226v3.226h5.807a3.23%203.23%200%20003.226-3.226%203.23%203.23%200%2000-3.226-3.226zm-3.226%203.871v1.29h-1.29v-1.29h1.29zm2.58%200v1.29h-1.29v-1.29h1.29zm2.581%200v1.29h-1.29v-1.29h1.29zm0-2.58v1.29h-6.451v-1.29h6.451zM23.097%2017.29a3.23%203.23%200%2000-3.226%203.226%203.23%203.23%200%20003.226%203.226%203.23%203.23%200%20003.226-3.226%203.23%203.23%200%2000-3.226-3.226zm12.903%200a3.23%203.23%200%2000-3.226%203.226A3.23%203.23%200%200036%2023.742a3.23%203.23%200%20003.226-3.226A3.23%203.23%200%200036%2017.29z'/%3e%3c/g%3e%3c/svg%3e"
+                alt="Fast Onboarding"
+                role="img"
+                width="72"
+                height="72"
+                class="feature__icon"
+              />
+              <h3 id="feature-fast-onboarding-heading" class="feature__heading">
+                Fast Onboarding
+              </h3>
+              <p
+                id="feature-fast-onboarding-description"
+                class="feature__description"
+              >
+                We don’t do branches. Open your account in minutes online and
+                start taking control of your finances right away.
+              </p>
+            </article>
+            <article
+              aria-labelledby="feature-open-api-heading"
+              aria-describedby="feature-open-api-description"
+              class="feature"
+            >
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='72'%20height='72'%3e%3cdefs%3e%3clinearGradient%20id='a'%20x1='0%25'%20x2='99.58%25'%20y1='0%25'%20y2='99.58%25'%3e%3cstop%20offset='0%25'%20stop-color='%2333D35E'/%3e%3cstop%20offset='100%25'%20stop-color='%232AB6D9'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg%20fill='none'%20fill-rule='evenodd'%3e%3ccircle%20cx='36'%20cy='36'%20r='36'%20fill='url(%23a)'/%3e%3cpath%20fill='%23FFF'%20fill-rule='nonzero'%20d='M44.633%2016a3.096%203.096%200%20013.092%203.092v7.57c5.23.286%209.393%204.365%209.393%209.338%200%204.973-4.162%209.052-9.393%209.338v7.57A3.095%203.095%200%200144.633%2056H27.099a3.095%203.095%200%2001-3.092-3.092v-7.24a.587.587%200%20111.174%200v3.522h21.37v-3.852a10.479%2010.479%200%2001-2.89-.568l-4.383%202.391c-.466.254-1.013-.22-.833-.716l1.308-3.596h-6.705a.592.592%200%2001-.415-.172l-4.697-4.696a.593.593%200%2001-.172-.415V24.728c0-.324.263-.587.587-.587h15.03c.324%200%20.587.263.587.587v2.402c.819-.258%201.685-.419%202.583-.468v-4.478H25.18v20.704a.587.587%200%2011-1.174%200V19.092A3.096%203.096%200%200127.099%2016zm1.918%2034.364H25.18v2.544a1.92%201.92%200%20001.918%201.918h17.534a1.92%201.92%200%20001.918-1.918v-2.544zm-9.433.705c.325%200%20.587.262.587.587v1.878a.587.587%200%2001-.587.587h-2.505a.587.587%200%2001-.587-.587v-1.878c0-.325.263-.587.587-.587zm-.587%201.174h-1.33v.704h1.33v-.704zM47.138%2027.82c-4.856%200-8.806%203.67-8.806%208.18%200%202.217.94%204.293%202.647%205.846.177.16.239.41.157.635l-1.056%202.905%203.251-1.773a.587.587%200%2001.49-.034%209.343%209.343%200%20003.317.601c4.856%200%208.806-3.67%208.806-8.18s-3.95-8.18-8.806-8.18zm0%201.33c.324%200%20.587.264.587.588v1.291h.04a2.469%202.469%200%20012.465%202.466v.626a.587.587%200%2011-1.174%200v-.626c0-.712-.58-1.291-1.292-1.291h-.94c-.884%200-1.604.72-1.604%201.604%200%20.885.72%201.605%201.605%201.605h.626a2.782%202.782%200%20012.779%202.779c0%201.44-1.1%202.627-2.505%202.765v1.305a.587.587%200%2011-1.174%200v-1.291h-.04a2.469%202.469%200%2001-2.465-2.466.587.587%200%20111.174%200c0%20.712.58%201.291%201.292%201.291h.939c.885%200%201.605-.72%201.605-1.604%200-.885-.72-1.605-1.605-1.605h-.626a2.782%202.782%200%2001-2.78-2.779c0-1.44%201.102-2.627%202.506-2.765v-1.305c0-.324.263-.587.587-.587zm-4.345-3.835H28.938v11.663h4.11c.324%200%20.587.263.587.588v4.11h5.567c-1.327-1.622-2.044-3.593-2.044-5.676%200-1.112.208-2.18.59-3.17h-6.266a.587.587%200%20110-1.174h6.82c.399-.711.893-1.369%201.466-1.957h-2.023a.587.587%200%20110-1.174h3.13c.076%200%20.148.014.214.04.53-.38%201.1-.71%201.704-.985v-2.265zM32.461%2038.153h-2.692l2.692%202.692v-2.692zm3.405-3.366a.587.587%200%20110%201.174h-4.384a.587.587%200%20110-1.174zm-.626-6.263a.587.587%200%20110%201.175h-3.758a.587.587%200%20110-1.175zm9.393-11.35H27.099a1.92%201.92%200%2000-1.918%201.918v1.918h21.37v-1.918a1.92%201.92%200%2000-1.918-1.918zm-7.515%201.33a.587.587%200%20110%201.175h-2.505a.587.587%200%20110-1.174z'/%3e%3c/g%3e%3c/svg%3e"
+                alt="Open API"
+                role="img"
+                width="72"
+                height="72"
+                class="feature__icon"
+              />
+              <h3 id="feature-open-api-heading" class="feature__heading">
+                Open API
+              </h3>
+              <p id="feature-open-api-description" class="feature__description">
+                Manage your savings, investments, pension, and much more from
+                one account. Tracking your money has never been easier.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest articles -->
+      <section
+        aria-labelledby="latest-articles-heading"
+        class="latest-articles"
+      >
+        <div class="container">
+          <h2 id="latest-articles-heading" class="latest-articles__heading">
+            Latest Articles
+          </h2>
+          <div class="latest-articles__articles">
+            <article
+              aria-labelledby="latest-article-1-title"
+              aria-describedby="latest-article-1-text"
+              tabindex="0"
+              class="latest-article"
+            >
+              <img
+                src="/assets/image-currency-fQkhky90.jpg"
+                alt="Currency"
+                role="img"
+                class="latest-article__img"
+              />
+              <div class="latest-article__content">
+                <header class="latest-article__header">
+                  <address class="latest-article__author">
+                    By Claire Robinson
+                  </address>
+                  <h3
+                    id="latest-article-1-title"
+                    class="latest-article__heading"
+                  >
+                    Receive money in any currency with no fees
+                  </h3>
+                </header>
+                <p id="latest-article-1-text" class="latest-article__text">
+                  The world is getting smaller and we’re becoming more mobile.
+                  So why should you be forced to only receive money in a single
+                  …
+                </p>
+              </div>
+            </article>
+            <article
+              aria-labelledby="latest-article-2-title"
+              aria-describedby="latest-article-2-text"
+              tabindex="0"
+              class="latest-article"
+            >
+              <img
+                src="/assets/image-restaurant-Djjssr-y.jpg"
+                alt="Restaurant dinner"
+                role="img"
+                class="latest-article__img"
+              />
+              <div class="latest-article__content">
+                <header class="latest-article__header">
+                  <address class="latest-article__author">
+                    By Wilson Hutton
+                  </address>
+                  <h3
+                    id="latest-article-2-title"
+                    class="latest-article__heading"
+                  >
+                    Treat yourself without worrying about money
+                  </h3>
+                </header>
+                <p id="latest-article-2-text" class="latest-article__text">
+                  Our simple budgeting feature allows you to separate out your
+                  spending and set realistic limits each month. That means you …
+                </p>
+              </div>
+            </article>
+            <article
+              aria-labelledby="latest-article-3-title"
+              aria-describedby="latest-article-3-text"
+              tabindex="0"
+              class="latest-article"
+            >
+              <img
+                src="/assets/image-plane-CXMVhojA.jpg"
+                alt="Plane window"
+                role="img"
+                class="latest-article__img"
+              />
+              <div class="latest-article__content">
+                <header class="latest-article__header">
+                  <address class="latest-article__author">
+                    By Wilson Hutton
+                  </address>
+                  <h3
+                    id="latest-article-3-title"
+                    class="latest-article__heading"
+                  >
+                    Take your Easybank card wherever you go
+                  </h3>
+                </header>
+                <p id="latest-article-3-text" class="latest-article__text">
+                  We want you to enjoy your travels. This is why we don’t charge
+                  any fees on purchases while you’re abroad. We’ll even show you
+                  …
+                </p>
+              </div>
+            </article>
+            <article
+              aria-labelledby="latest-article-4-title"
+              aria-describedby="latest-article-4-text"
+              tabindex="0"
+              class="latest-article"
+            >
+              <img
+                src="/assets/image-confetti-8wpdFRL8.jpg"
+                alt="Confettis"
+                role="img"
+                class="latest-article__img"
+              />
+              <div class="latest-article__content">
+                <header class="latest-article__header">
+                  <address class="latest-article__author">
+                    By Claire Robinson
+                  </address>
+                  <h3
+                    id="latest-article-4-title"
+                    class="latest-article__heading"
+                  >
+                    Our invite-only Beta accounts are now live!
+                  </h3>
+                </header>
+                <p id="latest-article-4-text" class="latest-article__text">
+                  After a lot of hard work by the whole team, we’re excited to
+                  launch our closed beta. It’s easy to request an invite through
+                  the site ...
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div
+        class="container flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-y-9 md:gap-y-14"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-between lg:justify-start gap-y-9 gap-x-20 xl:gap-x-32 md:w-full"
+        >
+          <div
+            class="flex flex-col justify-between items-center md:items-start gap-y-8"
+          >
+            <!-- Logo -->
+            <a href="#" aria-label="Go to home" class="footer__logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
+                <defs>
+                  <linearGradient
+                    id="a"
+                    x1="72.195%"
+                    x2="17.503%"
+                    y1="0%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#33D35E" />
+                    <stop offset="100%" stop-color="#2AB6D9" />
+                  </linearGradient>
+                </defs>
+                <use href="#logo-svg-path" />
+              </svg>
+            </a>
+            <!-- Social media links -->
+            <nav aria-label="Social media links">
+              <ul
+                class="m-0 p-0 list-none flex gap-x-4 md:gap-x-3 items-center"
+              >
+                <li>
+                  <a
+                    href="https://web.facebook.com"
+                    target="_blank"
+                    aria-label="Facebook"
+                    class="footer__sm-link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                    >
+                      <use href="#facebook-icon-path"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    aria-label="Youtube"
+                    class="footer__sm-link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="20"
+                      viewBox="0 0 21 20"
+                    >
+                      <use href="#youtube-icon-path"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    aria-label="Twitter"
+                    class="footer__sm-link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="18"
+                      viewBox="0 0 21 18"
+                    >
+                      <use href="#twitter-icon-path"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.pinterest.com/"
+                    target="_blank"
+                    aria-label="Pinterest"
+                    class="footer__sm-link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                    >
+                      <use href="#pinterest-icon-path"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    aria-label="Instagram"
+                    class="footer__sm-link"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="20"
+                      viewBox="0 0 21 20"
+                    >
+                      <use href="#instagram-icon-path"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- Site navigation -->
+          <nav
+            aria-label="Site navigation"
+            class="flex flex-col gap-y-4 md:flex-row gap-x-16 xl:gap-x-32"
+          >
+            <ul
+              class="m-0 p-0 list-none flex flex-col text-center md:text-left gap-y-4"
+            >
+              <li>
+                <a href="#" class="footer__link">About us</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Blog</a>
+              </li>
+            </ul>
+            <ul
+              class="m-0 p-0 list-none flex flex-col text-center md:text-left gap-y-4"
+            >
+              <li>
+                <a href="#" class="footer__link">Careers</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Support</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Privacy Policy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div
+          class="flex flex-col items-center lg:items-end justify-between gap-y-7"
+        >
+          <!-- Request invite CTA -->
+          <a href="#" class="btn">Request Invite</a>
+          <!-- Copyright -->
+          <p class="footer__copyright text-center lg:text-right">
+            © Easybank. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SVGs -->
+    <div aria-hidden="true" class="hidden">
+      <!-- Hamburger icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11">
+        <symbol id="hamburger-icon-path">
+          <g fill="#2D314D" fill-rule="evenodd">
+            <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z" />
+          </g>
+        </symbol>
+      </svg>
+      <!-- Close icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19">
+        <symbol id="close-icon-path">
+          <g fill="#2D314D" fill-rule="evenodd">
+            <path d="M.868.661l16.97 16.97-.706.708L.162 1.369z" />
+            <path d="M.161 17.632L17.131.662l.708.706-16.97 16.97z" />
+          </g>
+        </symbol>
+      </svg>
+      <!-- Logo -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
+        <symbol id="logo-svg-path">
+          <g fill="none" fill-rule="evenodd">
+            <path
+              fill="var(--neutral-color-0)"
+              fill-rule="nonzero"
+              d="M37.754 15.847c2.852 0 5.152-1.622 5.952-4.216h-3.897c-.376.665-1.14 1.066-2.055 1.066-1.237 0-2.065-.674-2.32-1.978h8.44c.051-.352.081-.694.081-1.037 0-3.335-2.537-5.95-6.201-5.95-3.568 0-6.175 2.564-6.175 6.049 0 3.473 2.628 6.066 6.175 6.066zm2.344-7.297h-4.596c.317-1.129 1.11-1.749 2.252-1.749 1.181 0 2 .613 2.344 1.75zm10.946 7.296c1.32 0 2.5-.434 3.43-1.188l.336.804h3.027V4.093h-2.919l-.4.88c-.94-.775-2.135-1.222-3.474-1.222-3.476 0-5.961 2.505-5.961 6.026 0 3.533 2.485 6.07 5.961 6.07zm.524-3.467c-1.467 0-2.545-1.108-2.545-2.593 0-1.475 1.069-2.583 2.545-2.583 1.466 0 2.544 1.108 2.544 2.583 0 1.485-1.078 2.593-2.544 2.593zm13.123 3.467c3.02 0 5.025-1.554 5.025-3.93 0-2.883-2.387-3.256-4.183-3.575-1.08-.193-1.95-.344-1.95-.99 0-.527.422-.838 1.05-.838.71 0 1.197.337 1.197 1.063h3.667c-.044-2.303-1.92-3.843-4.816-3.843-2.912 0-4.854 1.47-4.854 3.75 0 2.757 2.337 3.289 4.1 3.574 1.092.181 1.952.368 1.952 1.024 0 .587-.543.88-1.116.88-.742 0-1.32-.383-1.32-1.214h-3.77c.036 2.463 1.919 4.1 5.018 4.1zm8.1 3.858c2.936 0 4.344-1.257 5.877-4.736l4.764-10.863h-4.206l-2.249 6.263-2.412-6.263H70.31l4.698 10.43c-.53 1.414-.983 1.804-2.48 1.804H71.45v3.365h1.341zm18.504-3.858c3.5 0 5.973-2.515 5.973-6.048S94.796 3.75 91.295 3.75a5.332 5.332 0 00-2.825.784V0H84.6v15.474h2.897l.37-.844c.923.771 2.102 1.216 3.428 1.216zm-.523-3.467c-1.467 0-2.545-1.108-2.545-2.58 0-1.486 1.078-2.594 2.545-2.594 1.466 0 2.544 1.108 2.544 2.593 0 1.473-1.087 2.58-2.544 2.58zm13.598 3.467c1.32 0 2.5-.434 3.43-1.188l.336.804h3.027V4.093h-2.918l-.401.88c-.939-.775-2.135-1.222-3.474-1.222-3.476 0-5.96 2.505-5.96 6.026 0 3.533 2.484 6.07 5.96 6.07zm.524-3.467c-1.467 0-2.545-1.108-2.545-2.593 0-1.475 1.07-2.583 2.545-2.583 1.467 0 2.545 1.108 2.545 2.583 0 1.485-1.078 2.593-2.545 2.593zm12.653 3.095V9.403c0-1.447.702-2.3 1.923-2.3.986 0 1.483.657 1.483 1.98v6.39h3.915V8.543c0-2.897-1.733-4.773-4.373-4.773-1.47 0-2.733.565-3.58 1.508l-.537-1.172h-2.747v11.369h3.916zm13.748 0v-4.808l2.848 4.808h4.616l-3.902-5.95 3.543-5.419h-4.397l-2.708 4.454V0h-3.916v15.474h3.916z"
+            />
+            <g fill="url(#a)">
+              <path d="M10.802 0L0 19.704h5.986L16.789 0z" />
+              <path opacity=".5" d="M18.171 0L7.368 19.704h5.986L24.157 0z" />
+              <path opacity=".15" d="M25.539 0L14.737 19.704h5.986L31.525 0z" />
+            </g>
+          </g>
+        </symbol>
+      </svg>
+      <!-- Facebook icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <symbol id="facebook-icon-path">
+          <path
+            fill="var(--sm-link-color)"
+            d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"
+          />
+        </symbol>
+      </svg>
+      <!-- Youtube icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+        <symbol id="youtube-icon-path">
+          <path
+            fill="var(--sm-link-color)"
+            d="M10.333 0c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10zm3.701 14.077c-1.752.12-5.653.12-7.402 0C4.735 13.947 4.514 13.018 4.5 10c.014-3.024.237-3.947 2.132-4.077 1.749-.12 5.651-.12 7.402 0 1.898.13 2.118 1.059 2.133 4.077-.015 3.024-.238 3.947-2.133 4.077zM8.667 8.048l4.097 1.949-4.097 1.955V8.048z"
+          />
+        </symbol>
+      </svg>
+      <!-- Twitter icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
+        <symbol id="twitter-icon-path">
+          <path
+            fill="var(--sm-link-color)"
+            d="M20.667 2.797a8.192 8.192 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.606.996A4.096 4.096 0 0014.513.873c-2.649 0-4.595 2.472-3.997 5.038a11.648 11.648 0 01-8.457-4.287 4.109 4.109 0 001.27 5.478A4.086 4.086 0 011.47 6.59c-.045 1.901 1.317 3.68 3.29 4.075a4.113 4.113 0 01-1.853.07 4.106 4.106 0 003.834 2.85 8.25 8.25 0 01-6.075 1.7 11.616 11.616 0 006.29 1.843c7.618 0 11.922-6.434 11.662-12.205a8.354 8.354 0 002.048-2.124z"
+          />
+        </symbol>
+      </svg>
+      <!-- Pinterest icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+        <symbol id="pinterest-icon-path">
+          <path
+            fill="var(--sm-link-color)"
+            d="M10 0C4.478 0 0 4.477 0 10c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.545 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.522 0 10-4.477 10-10S15.522 0 10 0z"
+          />
+        </symbol>
+      </svg>
+      <!-- Instagram icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+        <symbol id="instagram-icon-path">
+          <path
+            fill="var(--sm-link-color)"
+            d="M10.333 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.976 1.409 4.1 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.058 4.042-.124 2.687-1.386 3.975-4.099 4.099-1.055.048-1.37.058-4.042.058-2.67 0-2.986-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zm0-1.802C7.618 0 7.278.012 6.211.06 2.579.227.56 2.242.394 5.877.345 6.944.334 7.284.334 10s.011 3.057.06 4.123c.166 3.632 2.181 5.65 5.816 5.817 1.068.048 1.408.06 4.123.06 2.716 0 3.057-.012 4.124-.06 3.628-.167 5.651-2.182 5.816-5.817.049-1.066.06-1.407.06-4.123s-.011-3.056-.06-4.122C20.11 2.249 18.093.228 14.458.06 13.39.01 13.049 0 10.333 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.339-9.87a1.2 1.2 0 10-.001 2.4 1.2 1.2 0 000-2.4z"
+          />
+        </symbol>
+      </svg>
+    </div>
+  </body>
+</html>
