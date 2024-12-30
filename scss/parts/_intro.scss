@@ -5,6 +5,7 @@
 
 .intro {
   position: relative;
+  overflow-x: hidden;
 
   &__layout {
     display: flex;

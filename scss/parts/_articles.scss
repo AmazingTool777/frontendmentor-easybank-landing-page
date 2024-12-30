@@ -6,6 +6,7 @@
 .latest-articles {
   padding-top: fns.px-to-rem(88);
   padding-bottom: fns.px-to-rem(88);
+  overflow-x: hidden;
 
   @include rwd.min-breakpoint-mediaquery("lg") {
     padding-bottom: fns.px-to-rem(80);
