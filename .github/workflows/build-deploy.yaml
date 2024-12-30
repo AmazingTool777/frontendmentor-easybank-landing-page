@@ -37,5 +37,7 @@ jobs:
       - name: Install Netlify CLI
         run: pnpm install -D netlify-cli
 
+      - run: echo "$NETLIFY_AUTH_TOKEN" && echo "$NETLIFY_SITE_ID"
+
       - name: Deploy to Netlify
         run: netlify deploy --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir=dist --prod
