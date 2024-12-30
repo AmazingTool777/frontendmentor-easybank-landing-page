@@ -380,7 +380,19 @@
             <!-- Logo -->
             <a href="#" aria-label="Go to home" class="footer__logo">
               <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
-                <use href="#logo-path-svg" />
+                <defs>
+                  <linearGradient
+                    id="a"
+                    x1="72.195%"
+                    x2="17.503%"
+                    y1="0%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#33D35E" />
+                    <stop offset="100%" stop-color="#2AB6D9" />
+                  </linearGradient>
+                </defs>
+                <use href="#logo-svg-path" />
               </svg>
             </a>
             <!-- Social media links -->
@@ -543,13 +555,7 @@
       </svg>
       <!-- Logo -->
       <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
-        <symbol id="logo-path-svg">
-          <defs>
-            <linearGradient id="a" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
-              <stop offset="0%" stop-color="#33D35E" />
-              <stop offset="100%" stop-color="#2AB6D9" />
-            </linearGradient>
-          </defs>
+        <symbol id="logo-svg-path">
           <g fill="none" fill-rule="evenodd">
             <path
               fill="var(--neutral-color-0)"

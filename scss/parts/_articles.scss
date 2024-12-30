@@ -77,7 +77,7 @@
   margin: auto;
   max-width: fns.px-to-rem(400);
   cursor: pointer;
-  transform: translateX(50%) skewX(30deg);
+  transform: translateX(-400px) skewX(-30deg);
   opacity: 0;
 
   @include rwd.min-breakpoint-mediaquery("md") {
