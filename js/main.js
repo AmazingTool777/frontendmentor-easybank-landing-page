@@ -102,12 +102,12 @@ const illustrationTl = gsap.timeline({
 });
 illustrationTl
   .to(".intro__illustration-bg", {
-    x: "var(--illustration-mockups-offset-y)",
+    "--illustration-bg-translate-x": "var(--illustration-bg-offset-x)",
     opacity: 1,
     duration: 0.15,
   })
   .to(".intro__illustration-mockups", {
-    y: "var(--illustration-mockups-offset-y)",
+    "--illustration-translate-y": "var(--illustration-mockups-offset-y)",
     opacity: 1,
     duration: 0.5,
   });

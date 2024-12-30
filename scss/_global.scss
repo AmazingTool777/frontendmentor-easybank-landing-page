@@ -22,7 +22,6 @@ body {
   font-family: var(--body-font-family);
   color: var(--neutral-color-300);
   background: var(--neutral-color-50);
-  overflow-x: hidden;
   font-weight: 300;
 }
 
@@ -61,4 +60,8 @@ a {
 
 button {
   cursor: pointer;
+}
+
+main {
+  overflow-y: clip;
 }

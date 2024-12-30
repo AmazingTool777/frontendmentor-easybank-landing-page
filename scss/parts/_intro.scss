@@ -5,7 +5,7 @@
 
 .intro {
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
 
   &__layout {
     display: flex;
@@ -124,12 +124,13 @@
 
   &__illustration-bg {
     --illustration-bg-offset-x: 0;
+    --illustration-bg-translate-x: calc(50% - var(--illustration-bg-offset-x));
 
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: bottom right;
-    transform: translateX(calc(50% - var(--illustration-bg-offset-x)));
+    transform: translateX(var(--illustration-bg-translate-x));
     opacity: 0;
 
     @include rwd.min-breakpoint-mediaquery("lg") {
@@ -147,12 +148,14 @@
 
   &__illustration-mockups {
     --illustration-mockups-offset-y: 4.15%;
+    --illustration-translate-y: calc(
+      -25% + var(--illustration-mockups-offset-y)
+    );
 
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%)
-      translateY(calc(-25% + var(--illustration-mockups-offset-y)));
+    transform: translateX(-50%) translateY(var(--illustration-translate-y));
     opacity: 0;
     width: min(91.75%, fns.px-to-rem(514));
 
@@ -162,8 +165,7 @@
       width: auto;
       height: 143.29%;
       left: 11.66%;
-      transform: translateX(0)
-        translateY(calc(-25% + var(--illustration-mockups-offset-y)));
+      transform: translateX(0) translateY(var(--illustration-translate-y));
     }
   }
 }
