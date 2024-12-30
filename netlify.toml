@@ -2,6 +2,15 @@
 command = "deno task build" # Your Deno build command
 publish = "dist"            # The output directory for static files
 
+[env]
+  PYTHON_VERSION = "3.9"  # Set the correct Python version (you can adjust this version)
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"  # This is needed for installing required dependencies
+
+[context.production.environment]
+  DENO_DEPLOYMENT_ID = "true"
+  
 [build.environment]
 DENO_INSTALL = "/usr/local" # Install path for Deno
 PATH = "/usr/local/bin:/opt/buildhome/.deno/bin:$PATH" # Add Deno to PATH
