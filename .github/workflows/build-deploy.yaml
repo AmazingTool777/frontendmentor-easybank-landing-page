@@ -26,7 +26,7 @@ jobs:
         run: deno task build
 
       - name: Install Netlify CLI
-        run: deno install npm:netlify-cli@latest --allow-scripts=npm:netlify-cli,npm:sharp,npm:esbuild
+        run: deno install npm:netlify-cli@latest --allow-scripts=npm:netlify-cli,npm:sharp,npm:esbuild,npm:@parcel/watcher
 
       - name: Deploy to Netlify
         run: netlify deploy --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir=dist --prod
